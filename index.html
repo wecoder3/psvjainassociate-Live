@@ -499,14 +499,14 @@ img { max-width: 100%; }
 .ticker-inner {
   display: inline-flex;
   white-space: nowrap;
-  animation: ticker 60s linear infinite;
+  animation: ticker 45s linear infinite;
   gap: 60px;
   align-items: center;
 }
 .ticker-inner:hover { animation-play-state: paused; }
 @keyframes ticker {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 .ticker-item {
   font-size: 12.5px;
@@ -1864,24 +1864,45 @@ footer {
   </div>
   <div class="ticker-track">
     <div class="ticker-inner" id="tickerInner">
-      <span class="ticker-item"><span class="date-badge">10/03/2026</span><strong>GSTR-7 & GSTR-8 for February 2026</strong></span>
-      <span class="ticker-sep">â—†</span>
+      <span class="ticker-item"><span class="date-badge">10/03/2026</span><strong>GSTR-7 &amp; GSTR-8 for February 2026</strong></span>
+      <span class="ticker-sep">&#9670;</span>
       <span class="ticker-item"><span class="date-badge">11/03/2026</span><strong>GSTR-1 Monthly for February 2026</strong></span>
-      <span class="ticker-sep">â—†</span>
-      <span class="ticker-item"><span class="date-badge">15/03/2026</span><strong>ESI & PF E-Payment for February 2026</strong></span>
-      <span class="ticker-sep">â—†</span>
+      <span class="ticker-sep">&#9670;</span>
+      <span class="ticker-item"><span class="date-badge">15/03/2026</span><strong>ESI &amp; PF E-Payment for February 2026</strong></span>
+      <span class="ticker-sep">&#9670;</span>
       <span class="ticker-item"><span class="date-badge">15/03/2026</span><strong>Advance Tax &ndash; 4th Instalment (100%) for FY 2025-26</strong></span>
-      <span class="ticker-sep">â—†</span>
+      <span class="ticker-sep">&#9670;</span>
       <span class="ticker-item"><span class="date-badge">20/03/2026</span><strong>GSTR-3B Monthly for February 2026</strong></span>
-      <span class="ticker-sep">â—†</span>
+      <span class="ticker-sep">&#9670;</span>
       <span class="ticker-item"><span class="date-badge">25/03/2026</span><strong>GST PMT-06 under QRMP Scheme for February 2026</strong></span>
-      <span class="ticker-sep">â—†</span>
+      <span class="ticker-sep">&#9670;</span>
       <span class="ticker-item"><span class="date-badge">31/03/2026</span><strong>Opt for Composition Scheme for FY 2026-27</strong></span>
-      <span class="ticker-sep">â—†</span>
+      <span class="ticker-sep">&#9670;</span>
       <span class="ticker-item"><span class="date-badge">31/03/2026</span><strong>Balance Advance Tax to avoid interest u/s 234B</strong></span>
-      <span class="ticker-sep">â—†</span>
+      <span class="ticker-sep">&#9670;</span>
       <span class="ticker-item"><span class="date-badge">31/03/2026</span><strong>Updated ITR (ITR-U) for AY 2024-25 with 25% additional tax</strong></span>
-      <span class="ticker-sep">â—†</span>
+      <span class="ticker-sep">&#9670;</span>
+      <span class="ticker-item"><span class="date-badge">31/03/2026</span><strong>LUT filing for Exporters for FY 2026-27</strong></span>
+      <span class="ticker-sep">&#9670;</span>
+      <!-- Duplicate for seamless loop -->
+      <span class="ticker-item"><span class="date-badge">10/03/2026</span><strong>GSTR-7 &amp; GSTR-8 for February 2026</strong></span>
+      <span class="ticker-sep">&#9670;</span>
+      <span class="ticker-item"><span class="date-badge">11/03/2026</span><strong>GSTR-1 Monthly for February 2026</strong></span>
+      <span class="ticker-sep">&#9670;</span>
+      <span class="ticker-item"><span class="date-badge">15/03/2026</span><strong>ESI &amp; PF E-Payment for February 2026</strong></span>
+      <span class="ticker-sep">&#9670;</span>
+      <span class="ticker-item"><span class="date-badge">15/03/2026</span><strong>Advance Tax &ndash; 4th Instalment (100%) for FY 2025-26</strong></span>
+      <span class="ticker-sep">&#9670;</span>
+      <span class="ticker-item"><span class="date-badge">20/03/2026</span><strong>GSTR-3B Monthly for February 2026</strong></span>
+      <span class="ticker-sep">&#9670;</span>
+      <span class="ticker-item"><span class="date-badge">25/03/2026</span><strong>GST PMT-06 under QRMP Scheme for February 2026</strong></span>
+      <span class="ticker-sep">&#9670;</span>
+      <span class="ticker-item"><span class="date-badge">31/03/2026</span><strong>Opt for Composition Scheme for FY 2026-27</strong></span>
+      <span class="ticker-sep">&#9670;</span>
+      <span class="ticker-item"><span class="date-badge">31/03/2026</span><strong>Balance Advance Tax to avoid interest u/s 234B</strong></span>
+      <span class="ticker-sep">&#9670;</span>
+      <span class="ticker-item"><span class="date-badge">31/03/2026</span><strong>Updated ITR (ITR-U) for AY 2024-25 with 25% additional tax</strong></span>
+      <span class="ticker-sep">&#9670;</span>
       <span class="ticker-item"><span class="date-badge">31/03/2026</span><strong>LUT filing for Exporters for FY 2026-27</strong></span>
     </div>
   </div>
