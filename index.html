@@ -1,0 +1,3420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PSV Jain & Associates | Chartered Accountants Mumbai</title>
+<meta name="description" content="PSV Jain & Associates – Chartered Accountants in Mumbai. Income Tax, GST, Company Registration, Audit & Financial Advisory services. Located in Borivali East.">
+<meta name="keywords" content="Chartered Accountant Mumbai, CA Borivali, GST filing Mumbai, income tax filing Mumbai, PSV Jain Associates">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: auto; }
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 14px;
+  color: #333;
+  background: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* ── COLORS ── */
+:root {
+  --navy: #1a2744;
+  --navy-dark: #0f1a30;
+  --navy-mid: #243356;
+  --gold: #c8922a;
+  --gold-light: #e0a83a;
+  --gold-pale: #f5e6c8;
+  --white: #ffffff;
+  --light-bg: #f0f4f9;
+  --border: #dce3ee;
+  --text-dark: #1a2744;
+  --text-mid: #4a5568;
+  --text-light: #6b7a94;
+  --red-ticker: #c0392b;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; }
+
+/* ══════════════════════════════════════
+   TOP BAR
+══════════════════════════════════════ */
+.topbar {
+  background: var(--navy-dark);
+  padding: 7px 0;
+  font-size: 12.5px;
+  color: #b8c4d8;
+}
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.topbar-left { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+.topbar-left a { color: #b8c4d8; display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
+.topbar-left a:hover { color: var(--gold-light); }
+.topbar-left i { color: var(--gold); font-size: 11px; }
+.topbar-right { display: flex; gap: 10px; }
+.topbar-social {
+  width: 26px; height: 26px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 3px;
+  display: flex; align-items: center; justify-content: center;
+  color: #b8c4d8;
+  font-size: 11px;
+  transition: background 0.2s, color 0.2s;
+}
+.topbar-social:hover { background: var(--gold); color: #fff; }
+
+/* ══════════════════════════════════════
+   HEADER / LOGO BAR
+══════════════════════════════════════ */
+.header {
+  background: var(--white);
+  border-bottom: 3px solid var(--gold);
+  padding: 14px 0;
+  box-shadow: 0 2px 12px rgba(26,39,68,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.logo-emblem {
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  background: transparent;
+}
+.logo-emblem svg { display: block; }
+.logo-text {}
+.logo-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.15;
+  letter-spacing: 0.3px;
+}
+.logo-text h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.logo-text p {
+  font-size: 11px;
+  color: var(--text-light);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 2px;
+  font-weight: 500;
+}
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.header-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 20px;
+  background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  border: 1px solid var(--gold);
+  transition: all 0.25s;
+}
+.header-contact-btn i { color: var(--gold); font-size: 11px; }
+.header-contact-btn:hover { background: var(--gold); border-color: var(--gold); }
+.header-contact-btn:hover i { color: #fff; }
+.header-icai {
+  font-size: 10.5px;
+  color: var(--text-light);
+  letter-spacing: 0.5px;
+}
+.header-icai strong { color: var(--gold); }
+
+/* ══════════════════════════════════════
+   NAVIGATION
+══════════════════════════════════════ */
+.navbar {
+  background: var(--navy);
+  position: relative;
+  z-index: 999;
+}
+.navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: stretch;
+}
+.nav-item {
+  position: relative;
+}
+.nav-item > a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 13px 16px;
+  color: #d0d9ec;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.nav-item > a i.caret {
+  font-size: 9px;
+  margin-top: 1px;
+  opacity: 0.6;
+}
+.nav-item > a:hover,
+.nav-item.active > a {
+  background: var(--gold);
+  color: #fff;
+}
+.nav-item > a:hover i.caret,
+.nav-item.active > a i.caret { opacity: 1; }
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--white);
+  min-width: 220px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  border-top: 2px solid var(--gold);
+  z-index: 9999;
+  display: none;
+  animation: dropIn 0.18s ease;
+}
+@keyframes dropIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.nav-item:hover > .dropdown { display: block; }
+.dropdown li > a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  color: var(--text-dark);
+  font-size: 12.5px;
+  border-bottom: 1px solid #eef1f7;
+  transition: background 0.2s, color 0.2s, padding-left 0.2s;
+}
+.dropdown li:last-child > a { border-bottom: none; }
+.dropdown li > a i { color: var(--gold); font-size: 11px; width: 14px; }
+.dropdown li > a:hover {
+  background: var(--light-bg);
+  color: var(--gold);
+  padding-left: 22px;
+}
+
+/* Mega dropdown for Knowledge Bank */
+.mega-dropdown {
+  position: absolute;
+  top: 100%;
+  left: -200px;
+  background: var(--white);
+  width: 700px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  border-top: 2px solid var(--gold);
+  z-index: 9999;
+  display: none;
+  padding: 20px;
+  animation: dropIn 0.18s ease;
+}
+.nav-item:hover > .mega-dropdown { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.mega-col h4 {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+.mega-col ul { display: flex; flex-direction: column; gap: 4px; }
+.mega-col ul li a {
+  font-size: 12px;
+  color: var(--text-mid);
+  padding: 3px 0;
+  display: block;
+  transition: color 0.2s;
+}
+.mega-col ul li a:hover { color: var(--gold); }
+
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: var(--white);
+  font-size: 20px;
+  margin-left: auto;
+}
+.mobile-nav {
+  display: none;
+  background: var(--navy-dark);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.mobile-nav.open { display: block; max-height: 600px; overflow-y: auto; }
+.mobile-nav a {
+  display: block;
+  padding: 10px 20px;
+  color: #c0cce0;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: color 0.2s;
+}
+.mobile-nav a:hover { color: var(--gold-light); }
+
+/* ══════════════════════════════════════
+   HERO SLIDER
+══════════════════════════════════════ */
+.hero {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+  background: var(--navy-dark);
+}
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  background-size: cover;
+  background-position: center;
+}
+.hero-slide.active { opacity: 1; }
+.hero-slide-1 {
+  background:
+    linear-gradient(105deg, rgba(10,20,45,0.88) 0%, rgba(26,39,68,0.65) 55%, rgba(200,146,42,0.10) 100%),
+    url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1400&q=80') center/cover no-repeat;
+}
+.hero-slide-2 {
+  background:
+    linear-gradient(105deg, rgba(10,20,45,0.88) 0%, rgba(20,50,80,0.65) 60%, transparent 100%),
+    url('https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1400&q=80') center/cover no-repeat;
+}
+.hero-slide-3 {
+  background:
+    linear-gradient(105deg, rgba(10,20,45,0.88) 0%, rgba(26,39,68,0.70) 55%, rgba(200,146,42,0.08) 100%),
+    url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1400&q=80') center/cover no-repeat;
+}
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
+}
+.hero-tag {
+  display: inline-block;
+  background: var(--gold);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 14px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+.hero-sub {
+  font-size: 15px;
+  color: #a8bcd4;
+  max-width: 520px;
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-gold {
+  padding: 11px 26px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: #fff;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  box-shadow: 0 4px 15px rgba(200,146,42,0.35);
+}
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(200,146,42,0.5); }
+.btn-outline-white {
+  padding: 11px 26px;
+  background: transparent;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  cursor: pointer;
+  transition: all 0.25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.btn-outline-white:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+/* Slider dots */
+.hero-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+.dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+}
+.dot.active { background: var(--gold); width: 24px; border-radius: 4px; }
+
+/* Hero geometric accent */
+.hero-geo {
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: 45%;
+  overflow: hidden;
+  pointer-events: none;
+}
+.hero-geo::before {
+  content: '';
+  position: absolute;
+  right: -60px; top: 40px;
+  width: 360px; height: 360px;
+  border: 1px solid rgba(200,146,42,0.15);
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+.hero-geo::after {
+  content: '';
+  position: absolute;
+  right: 20px; top: 80px;
+  width: 280px; height: 280px;
+  border: 1px solid rgba(200,146,42,0.08);
+  border-radius: 50%;
+}
+
+/* ══════════════════════════════════════
+   TICKER
+══════════════════════════════════════ */
+.ticker-wrap {
+  background: #fff;
+  border-bottom: 2px solid var(--border);
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.ticker-label {
+  background: var(--gold);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 9px 16px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  z-index: 2;
+}
+.ticker-label::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 0; bottom: 0;
+  width: 20px;
+  background: var(--gold);
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+}
+.ticker-track {
+  overflow: hidden;
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.ticker-inner {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: ticker 60s linear infinite;
+  gap: 60px;
+  align-items: center;
+}
+.ticker-inner:hover { animation-play-state: paused; }
+@keyframes ticker {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.ticker-item {
+  font-size: 12.5px;
+  color: var(--text-mid);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.ticker-item strong { color: var(--navy); font-weight: 600; }
+.ticker-item .date-badge {
+  background: var(--navy);
+  color: var(--gold-light);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 2px;
+  letter-spacing: 0.3px;
+}
+.ticker-sep { color: var(--gold); font-size: 16px; }
+
+/* ══════════════════════════════════════
+   MAIN CONTENT AREA
+══════════════════════════════════════ */
+.main-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 26px;
+}
+
+/* ── LEFT COLUMN ── */
+/* About */
+.section-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+}
+.section-head {
+  background: linear-gradient(90deg, var(--navy), var(--navy-mid));
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-head h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.3px;
+}
+.section-head i { color: var(--gold); font-size: 14px; }
+.section-head .line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(200,146,42,0.5), transparent);
+  margin-left: 10px;
+}
+.section-body { padding: 20px; }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+.about-text {}
+.about-text p {
+  font-size: 13.5px;
+  color: var(--text-mid);
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+.about-text p:last-child { margin-bottom: 0; }
+.about-highlights {
+  background: var(--light-bg);
+  border-left: 3px solid var(--gold);
+  padding: 14px 16px;
+  border-radius: 0 4px 4px 0;
+}
+.about-highlights h4 {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: var(--text-mid);
+}
+.highlight-item i { color: var(--gold); font-size: 11px; margin-top: 3px; flex-shrink: 0; }
+.highlight-item:last-child { margin-bottom: 0; }
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border);
+}
+.why-item {
+  text-align: center;
+  padding: 16px 10px;
+  background: var(--light-bg);
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  transition: all 0.25s;
+}
+.why-item:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(200,146,42,0.12);
+}
+.why-item i {
+  font-size: 22px;
+  color: var(--navy);
+  display: block;
+  margin-bottom: 8px;
+}
+.why-item:hover i { color: var(--gold); }
+.why-item h4 {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+.why-item p { font-size: 11.5px; color: var(--text-light); }
+
+/* Contact block inside left */
+.contact-block {
+  background: var(--light-bg);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--navy);
+  border-radius: 4px;
+  padding: 16px;
+  margin-top: 0;
+}
+.contact-block h4 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+.contact-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-bottom: 7px;
+  font-size: 12.5px;
+  color: var(--text-mid);
+}
+.contact-row i { color: var(--gold); font-size: 11px; margin-top: 3px; flex-shrink: 0; }
+.contact-row a { color: var(--text-mid); transition: color 0.2s; }
+.contact-row a:hover { color: var(--gold); }
+
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.service-card {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 16px;
+  transition: all 0.25s;
+  cursor: pointer;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--navy), var(--gold));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+.service-card:hover { border-color: var(--gold); transform: translateY(-3px); box-shadow: 0 6px 20px rgba(26,39,68,0.1); }
+.service-card:hover::before { transform: scaleX(1); }
+.service-card-icon {
+  width: 44px; height: 44px;
+  background: var(--light-bg);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--navy);
+  font-size: 18px;
+  margin-bottom: 12px;
+  transition: all 0.25s;
+}
+.service-card:hover .service-card-icon { background: var(--navy); color: var(--gold); }
+.service-card h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 7px;
+  line-height: 1.3;
+}
+.service-card p { font-size: 12px; color: var(--text-light); line-height: 1.6; }
+.service-card .read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--gold);
+  margin-top: 10px;
+  letter-spacing: 0.3px;
+  transition: gap 0.2s;
+}
+.service-card:hover .read-more { gap: 8px; }
+
+/* ── RIGHT COLUMN ── */
+.sidebar {}
+.sidebar-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+}
+.sidebar-head {
+  background: linear-gradient(90deg, var(--navy), var(--navy-mid));
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sidebar-head h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.3px;
+}
+.sidebar-head i { color: var(--gold); font-size: 12px; }
+.sidebar-body { padding: 14px 16px; }
+
+/* News feed */
+.news-list { display: flex; flex-direction: column; }
+.news-item {
+  padding: 9px 0;
+  border-bottom: 1px dashed var(--border);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.news-item:last-child { border-bottom: none; padding-bottom: 0; }
+.news-date {
+  background: var(--navy);
+  color: var(--gold-light);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 7px;
+  border-radius: 2px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 2px;
+  letter-spacing: 0.3px;
+}
+.news-text {
+  font-size: 12px;
+  color: var(--text-mid);
+  line-height: 1.5;
+  flex: 1;
+}
+.news-text a { color: var(--text-mid); transition: color 0.2s; }
+.news-text a:hover { color: var(--gold); }
+
+/* Quick Links sidebar */
+.quick-links { display: flex; flex-direction: column; gap: 0; }
+.quick-link-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 12.5px;
+  color: var(--text-mid);
+  transition: color 0.2s, padding-left 0.2s;
+}
+.quick-link-item:last-child { border-bottom: none; }
+.quick-link-item i { color: var(--gold); font-size: 10px; flex-shrink: 0; }
+.quick-link-item:hover { color: var(--gold); padding-left: 4px; }
+
+/* Rating sidebar */
+.rating-box {
+  text-align: center;
+  padding: 6px 0;
+}
+.rating-num-big {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+}
+.rating-stars-big { color: var(--gold); font-size: 22px; letter-spacing: 3px; margin: 6px 0; }
+.rating-label { font-size: 11.5px; color: var(--text-light); letter-spacing: 0.5px; }
+.rating-divider { margin: 12px 0; height: 1px; background: var(--border); }
+.rating-testimonial {
+  font-size: 12px;
+  color: var(--text-mid);
+  font-style: italic;
+  line-height: 1.6;
+  padding: 0 4px;
+}
+.rating-author { font-size: 11.5px; color: var(--navy); font-weight: 600; margin-top: 6px; font-style: normal; }
+
+/* Important dates in sidebar */
+.dates-list { display: flex; flex-direction: column; gap: 0; max-height: 300px; overflow-y: auto; }
+.dates-list::-webkit-scrollbar { width: 3px; }
+.dates-list::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+.date-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 7px 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 12px;
+}
+.date-item:last-child { border-bottom: none; }
+.date-badge-block {
+  background: var(--navy);
+  color: var(--gold-light);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 2px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.date-text { color: var(--text-mid); line-height: 1.45; }
+
+/* ══════════════════════════════════════
+   STATS BAND
+══════════════════════════════════════ */
+.stats-band {
+  background: linear-gradient(90deg, var(--navy-dark), var(--navy), var(--navy-mid));
+  padding: 28px 20px;
+  margin-top: 0;
+}
+.stats-band-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+.stat-col { position: relative; }
+.stat-col:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 10%; bottom: 10%;
+  width: 1px;
+  background: rgba(255,255,255,0.12);
+}
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--gold-light);
+  line-height: 1;
+}
+.stat-unit { font-size: 16px; font-weight: 400; }
+.stat-label {
+  font-size: 12px;
+  color: #8ca0c0;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+/* ══════════════════════════════════════
+   CTA BANNER
+══════════════════════════════════════ */
+.cta-band {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, #e8b84a 100%);
+  padding: 28px 20px;
+}
+.cta-band-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.cta-band h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+.cta-band p { font-size: 13.5px; color: rgba(255,255,255,0.85); margin-top: 4px; }
+.btn-white {
+  padding: 11px 28px;
+  background: #fff;
+  color: var(--gold);
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+.btn-white:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+
+/* ══════════════════════════════════════
+   DISCLAIMER
+══════════════════════════════════════ */
+.disclaimer-section {
+  background: var(--light-bg);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 20px;
+}
+.disclaimer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.disclaimer-inner h4 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.disclaimer-inner p {
+  font-size: 12px;
+  color: var(--text-light);
+  line-height: 1.7;
+  max-width: 900px;
+}
+
+/* ══════════════════════════════════════
+   FOOTER
+══════════════════════════════════════ */
+footer {
+  background: var(--navy-dark);
+  color: #8ca0c0;
+  padding: 40px 20px 0;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 36px;
+  margin-bottom: 30px;
+}
+.footer-brand {}
+.footer-brand .logo-wrap { margin-bottom: 16px; }
+.footer-brand .logo-emblem { }
+.footer-brand .logo-text h1 { font-size: 16px; color: #fff; }
+.footer-brand .logo-text p { color: var(--gold); font-size: 9px; }
+.footer-brand p { font-size: 12.5px; color: #6a80a0; line-height: 1.75; margin-bottom: 16px; }
+.footer-address {
+  font-size: 12px;
+  color: #6a80a0;
+  line-height: 1.7;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+.footer-address i { color: var(--gold); font-size: 11px; margin-top: 3px; flex-shrink: 0; }
+.footer-col h4 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #fff;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(200,146,42,0.3);
+}
+.footer-links { display: flex; flex-direction: column; gap: 8px; }
+.footer-links a {
+  font-size: 12.5px;
+  color: #6a80a0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: color 0.2s, padding-left 0.2s;
+}
+.footer-links a i { color: var(--gold); font-size: 9px; }
+.footer-links a:hover { color: var(--gold-light); padding-left: 4px; }
+
+.footer-useful a {
+  font-size: 12px;
+  color: #6a80a0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+  border-bottom: 1px dashed rgba(255,255,255,0.05);
+  transition: color 0.2s;
+}
+.footer-useful a:last-child { border-bottom: none; }
+.footer-useful a:hover { color: var(--gold-light); }
+.footer-useful a i { color: var(--gold); font-size: 9px; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.footer-bottom p { font-size: 12px; color: #4a6080; }
+.footer-bottom span { color: var(--gold); }
+.footer-visits {
+  font-size: 12px;
+  color: #4a6080;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.visits-count {
+  background: var(--navy-mid);
+  color: var(--gold-light);
+  padding: 2px 10px;
+  border-radius: 2px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 11.5px;
+}
+
+/* ══════════════════════════════════════
+   QUERY FORM MODAL
+══════════════════════════════════════ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10,18,40,0.7);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+.modal-overlay.open { display: flex; }
+.modal-box {
+  background: #fff;
+  border-radius: 6px;
+  max-width: 480px;
+  width: 90%;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  animation: modalIn 0.25s ease;
+}
+@keyframes modalIn {
+  from { transform: scale(0.95) translateY(10px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+.modal-head {
+  background: linear-gradient(90deg, var(--navy), var(--navy-mid));
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--gold);
+}
+.modal-head h3 { font-family: 'Playfair Display',serif; font-size: 17px; color: #fff; }
+.modal-close {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: #fff;
+  width: 28px; height: 28px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.modal-close:hover { background: var(--gold); }
+.modal-body { padding: 20px; }
+.form-group { margin-bottom: 14px; }
+.form-group label { display: block; font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 13px;
+  color: var(--text-dark);
+  background: #fafbfc;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus { border-color: var(--gold); background: #fff; }
+.form-group textarea { min-height: 90px; resize: vertical; }
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-submit-btn {
+  width: 100%;
+  padding: 11px;
+  background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--gold);
+  transition: all 0.25s;
+}
+.form-submit-btn:hover { background: var(--gold); border-bottom-color: var(--gold-light); }
+
+/* ══════════════════════════════════════
+   SERVICE TABS
+══════════════════════════════════════ */
+.svc-tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-bottom: 2px solid var(--border);
+  background: var(--light-bg);
+  padding: 12px 12px 0;
+}
+.svc-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 14px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  margin-right: 4px;
+  margin-bottom: -2px;
+  cursor: pointer;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-mid);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.svc-tab-btn i { font-size: 12px; color: var(--text-light); }
+.svc-tab-btn:hover { background: #fff; color: var(--navy); border-color: var(--gold); }
+.svc-tab-btn:hover i { color: var(--gold); }
+.svc-tab-btn.active {
+  background: #fff;
+  color: var(--navy);
+  font-weight: 600;
+  border-color: var(--gold);
+  border-bottom: 2px solid #fff;
+  z-index: 1;
+}
+.svc-tab-btn.active i { color: var(--gold); }
+
+/* Panels */
+.svc-panels { background: #fff; }
+.svc-panel { display: none; }
+.svc-panel.active { display: block; }
+
+.svc-panel-inner {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0;
+  min-height: 360px;
+}
+.svc-panel-left {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 100%);
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.svc-panel-left::after {
+  content: '';
+  position: absolute;
+  bottom: -30px; right: -30px;
+  width: 120px; height: 120px;
+  background: rgba(200,146,42,0.08);
+  border-radius: 50%;
+}
+.svc-panel-icon {
+  width: 52px; height: 52px;
+  background: rgba(200,146,42,0.15);
+  border: 1px solid rgba(200,146,42,0.4);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold-light);
+  font-size: 20px;
+}
+.svc-panel-left h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.3;
+}
+.svc-tagline {
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.6;
+  flex: 1;
+}
+.svc-enquire-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  background: var(--gold);
+  color: #fff;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  margin-top: auto;
+  border: none;
+  cursor: pointer;
+  font-family: 'Source Sans 3', sans-serif;
+}
+.svc-enquire-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+.svc-panel-right {
+  padding: 20px 24px;
+  overflow-y: auto;
+  max-height: 480px;
+}
+.svc-panel-right::-webkit-scrollbar { width: 3px; }
+.svc-panel-right::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+.svc-detail-block {
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px dashed var(--border);
+}
+.svc-detail-block:last-child { border-bottom: none; margin-bottom: 0; }
+.svc-detail-block h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.svc-detail-block h4 i { color: var(--gold); font-size: 12px; }
+.svc-detail-block p { font-size: 13px; color: var(--text-mid); line-height: 1.75; }
+
+.svc-points-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 16px;
+}
+.svc-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  font-size: 12.5px;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+.svc-point i { color: var(--gold); font-size: 10px; margin-top: 4px; flex-shrink: 0; }
+
+.svc-dates-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.svc-date-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 10px;
+  background: var(--light-bg);
+  border-radius: 4px;
+  border-left: 3px solid var(--gold);
+  font-size: 12px;
+  color: var(--text-mid);
+  line-height: 1.4;
+}
+.svc-date-badge {
+  background: var(--navy);
+  color: var(--gold-light);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 2px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .svc-panel-inner { grid-template-columns: 1fr; }
+  .svc-panel-left { padding: 20px 16px; flex-direction: row; flex-wrap: wrap; gap: 10px; }
+  .svc-panel-left h3 { font-size: 14px; }
+  .svc-points-grid { grid-template-columns: 1fr; }
+  .svc-dates-row { grid-template-columns: 1fr; }
+  .svc-tab-btn span { display: none; }
+  .svc-tab-btn { padding: 8px 10px; }
+  .svc-panel-right { max-height: none; }
+}
+
+/* ══ SERVICE DETAIL PAGE ══ */
+.svc-detail-page {
+  background: var(--light-bg);
+  min-height: 60vh;
+  padding: 0 0 40px;
+}
+.svc-detail-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.svc-detail-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 0;
+  font-size: 12.5px;
+  color: var(--text-light);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.svc-detail-breadcrumb button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 16px;
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 12.5px;
+  font-family: 'Source Sans 3', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-right: 8px;
+}
+.svc-detail-breadcrumb button:hover { background: var(--navy-mid); }
+.svc-detail-breadcrumb i.fa-chevron-right { font-size: 9px; }
+
+/* Detail page header */
+.svc-page-header {
+  background: linear-gradient(120deg, var(--navy) 0%, var(--navy-mid) 60%, #1e3560 100%);
+  border-radius: 6px;
+  padding: 32px 36px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.svc-page-header::after {
+  content: '';
+  position: absolute;
+  right: -40px; bottom: -40px;
+  width: 200px; height: 200px;
+  background: rgba(200,146,42,0.06);
+  border-radius: 50%;
+}
+.svc-page-header-icon {
+  width: 64px; height: 64px;
+  background: rgba(200,146,42,0.15);
+  border: 2px solid rgba(200,146,42,0.35);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold-light);
+  font-size: 26px;
+  flex-shrink: 0;
+}
+.svc-page-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 6px;
+}
+.svc-page-header p {
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.7);
+  margin: 0 0 16px;
+  line-height: 1.6;
+}
+.svc-page-header-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.svc-page-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 20px;
+  background: var(--gold);
+  color: #fff;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  font-family: 'Source Sans 3', sans-serif;
+  transition: background 0.2s;
+}
+.svc-page-cta:hover { background: var(--gold-light); }
+.svc-page-cta-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Source Sans 3', sans-serif;
+  transition: all 0.2s;
+}
+.svc-page-cta-outline:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.6); }
+
+/* Detail page body grid */
+.svc-page-body {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+  align-items: start;
+}
+.svc-page-main {}
+.svc-page-sidebar {}
+
+/* content blocks */
+.svc-content-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.04);
+}
+.svc-content-card-head {
+  background: linear-gradient(90deg, var(--navy), var(--navy-mid));
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.svc-content-card-head h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.svc-content-card-head i { color: var(--gold); font-size: 12px; }
+.svc-content-card-body { padding: 18px 20px; }
+.svc-content-card-body p { font-size: 13px; color: var(--text-mid); line-height: 1.8; margin-bottom: 10px; }
+.svc-content-card-body p:last-child { margin-bottom: 0; }
+.svc-page-pts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 20px;
+}
+.svc-page-pt {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-mid);
+  line-height: 1.5;
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--border);
+}
+.svc-page-pt:nth-last-child(-n+2) { border-bottom: none; }
+.svc-page-pt i { color: var(--gold); font-size: 10px; margin-top: 5px; flex-shrink: 0; }
+
+/* Due dates table */
+.svc-due-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.svc-due-table thead { background: var(--navy); color: #fff; }
+.svc-due-table th { padding: 9px 14px; text-align: left; font-weight: 600; font-size: 11.5px; letter-spacing: 0.5px; }
+.svc-due-table tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+.svc-due-table tbody tr:last-child { border-bottom: none; }
+.svc-due-table tbody tr:hover { background: var(--light-bg); }
+.svc-due-table td { padding: 9px 14px; color: var(--text-mid); vertical-align: top; }
+.svc-due-table .due-date-cell { color: var(--navy); font-weight: 700; white-space: nowrap; }
+.svc-due-table .due-type { display: inline-block; padding: 2px 8px; border-radius: 2px; font-size: 10.5px; font-weight: 700; }
+.due-type-gst  { background: rgba(26,39,68,0.08); color: var(--navy); }
+.due-type-tax  { background: rgba(200,146,42,0.12); color: #8a6000; }
+.due-type-roc  { background: rgba(40,120,80,0.1); color: #1d6040; }
+
+/* Sidebar cards */
+.svc-sidebar-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.svc-sidebar-head {
+  background: linear-gradient(90deg, var(--navy), var(--navy-mid));
+  padding: 9px 14px;
+  display: flex; align-items: center; gap: 8px;
+}
+.svc-sidebar-head h4 { font-size: 12.5px; font-weight: 600; color: #fff; }
+.svc-sidebar-head i { color: var(--gold); font-size: 11px; }
+.svc-sidebar-body { padding: 14px; }
+.svc-faq-item { padding: 10px 0; border-bottom: 1px dashed var(--border); }
+.svc-faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+.svc-faq-q { font-size: 12.5px; font-weight: 600; color: var(--navy); margin-bottom: 5px; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.svc-faq-q i { color: var(--gold); font-size: 10px; flex-shrink: 0; margin-top: 3px; }
+.svc-faq-a { font-size: 12px; color: var(--text-mid); line-height: 1.65; display: none; margin-top: 4px; }
+.svc-faq-item.open .svc-faq-a { display: block; }
+.svc-faq-item.open .svc-faq-q i { transform: rotate(180deg); }
+.svc-other-services { display: flex; flex-direction: column; gap: 0; }
+.svc-other-link {
+  display: flex; align-items: center; gap: 9px;
+  padding: 9px 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 12.5px; color: var(--text-mid);
+  cursor: pointer; transition: color 0.2s;
+}
+.svc-other-link:last-child { border-bottom: none; }
+.svc-other-link:hover { color: var(--gold); }
+.svc-other-link i.icon { color: var(--navy); font-size: 12px; width: 18px; text-align: center; }
+.svc-other-link:hover i.icon { color: var(--gold); }
+.svc-other-link i.arr { color: var(--border); font-size: 9px; margin-left: auto; }
+.svc-other-link:hover i.arr { color: var(--gold); }
+
+@media (max-width: 900px) {
+  .svc-page-body { grid-template-columns: 1fr; }
+  .svc-page-header { padding: 20px; flex-direction: column; gap: 14px; }
+  .svc-page-pts { grid-template-columns: 1fr; }
+}
+
+
+.svc-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,18,40,0.72);
+  z-index: 9000;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  backdrop-filter: blur(2px);
+}
+.svc-modal-overlay.open { display: flex; }
+.svc-modal-box {
+  background: #fff;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 740px;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(10,18,40,0.35);
+  overflow: hidden;
+  animation: svcSlideIn 0.22s ease;
+}
+@keyframes svcSlideIn {
+  from { transform: translateY(24px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+.svc-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  background: linear-gradient(90deg, var(--navy), var(--navy-mid));
+  flex-shrink: 0;
+}
+.svc-modal-icon {
+  width: 48px; height: 48px;
+  background: rgba(200,146,42,0.18);
+  border: 1px solid rgba(200,146,42,0.4);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold-light);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.svc-modal-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px; font-weight: 700;
+  color: #fff; margin: 0 0 3px;
+}
+.svc-modal-header p { font-size: 12px; color: rgba(255,255,255,0.65); margin: 0; }
+.svc-modal-close {
+  margin-left: auto;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff; width: 32px; height: 32px;
+  border-radius: 50%; cursor: pointer; font-size: 13px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: background 0.2s;
+}
+.svc-modal-close:hover { background: rgba(255,255,255,0.22); }
+.svc-modal-body { padding: 22px 24px; overflow-y: auto; flex: 1; }
+.svc-modal-body::-webkit-scrollbar { width: 4px; }
+.svc-modal-body::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+.svc-blk { margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px dashed var(--border); }
+.svc-blk:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.svc-blk h4 {
+  font-size: 11.5px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.6px; color: var(--navy); margin-bottom: 10px;
+  display: flex; align-items: center; gap: 7px;
+}
+.svc-blk h4 i { color: var(--gold); font-size: 11px; }
+.svc-blk p { font-size: 13px; color: var(--text-mid); line-height: 1.75; }
+.svc-pts { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; }
+.svc-pt { display: flex; align-items: flex-start; gap: 7px; font-size: 12.5px; color: var(--text-mid); line-height: 1.5; }
+.svc-pt i { color: var(--gold); font-size: 9px; margin-top: 5px; flex-shrink: 0; }
+.svc-dates { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.svc-date-row {
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 8px 10px; background: var(--light-bg);
+  border-radius: 4px; border-left: 3px solid var(--gold);
+  font-size: 12px; color: var(--text-mid); line-height: 1.4;
+}
+.svc-badge {
+  background: var(--navy); color: var(--gold-light);
+  font-size: 10px; font-weight: 700; padding: 2px 7px;
+  border-radius: 2px; white-space: nowrap; flex-shrink: 0;
+}
+.svc-modal-footer {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 24px; border-top: 1px solid var(--border);
+  background: var(--light-bg); flex-shrink: 0;
+}
+.svc-modal-close-btn {
+  padding: 9px 20px; background: #fff; border: 1px solid var(--border);
+  border-radius: 3px; font-size: 13px; color: var(--text-mid);
+  cursor: pointer; font-family: 'Source Sans 3', sans-serif; transition: all 0.2s;
+}
+.svc-modal-close-btn:hover { border-color: var(--navy); color: var(--navy); }
+@media (max-width: 600px) {
+  .svc-pts, .svc-dates { grid-template-columns: 1fr; }
+  .svc-modal-header { padding: 14px 16px; gap: 10px; }
+  .svc-modal-body { padding: 16px; }
+}
+
+@media (max-width: 900px) {
+  .main-wrap { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .stats-band-inner { grid-template-columns: repeat(2, 1fr); }
+  .navbar-inner { display: none; }
+  .hamburger-btn { display: flex; align-items: center; justify-content: center; }
+  .navbar { display: flex; justify-content: flex-end; padding: 8px 16px; }
+}
+@media (max-width: 640px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr; }
+  .cta-band-inner { flex-direction: column; text-align: center; }
+  .hero { height: 300px; }
+  .stats-band-inner { grid-template-columns: repeat(2, 1fr); }
+  .header-right { display: none; }
+  .topbar-left { flex-direction: column; gap: 4px; }
+  .services-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ TOP BAR ══ -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <a href="/cdn-cgi/l/email-protection#106063667a71797e3e7f767679737550777d71797c3e737f7d">
+        <i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="b6c6c5c0dcd7dfd898d9d0d0dfd5d3f6d1dbd7dfda98d5d9db">[email&#160;protected]</span>
+      </a>
+      <a href="tel:+91">
+        <i class="fas fa-phone"></i> +91 — Borivali East, Mumbai
+      </a>
+    </div>
+    <div class="topbar-right">
+      <a href="https://www.facebook.com" target="_blank" class="topbar-social" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.linkedin.com" target="_blank" class="topbar-social" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="topbar-social" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:psvjain.office@gmail.com" class="topbar-social" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ HEADER ══ -->
+<div class="header">
+  <div class="header-inner">
+    <a href="#" class="logo-wrap">
+            <div class="logo-emblem">
+        <img src="data:image/png;base64,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" alt="CA India Logo" style="width:72px;height:72px;object-fit:contain;">
+      </div>
+      <div class="logo-text">
+        <h1>PSV Jain <em>&</em> Associates</h1>
+        <p>Chartered Accountants &nbsp;·&nbsp; Mumbai, India</p>
+      </div>
+    </a>
+    <div class="header-right">
+      <a href="#" onclick="openFreeConsult(); return false;" class="header-contact-btn">
+        <i class="fas fa-headset"></i> Get Free Consultation
+      </a>
+      <div class="header-icai">
+        ICAI Registered &nbsp;|&nbsp; <strong>GST Practitioner</strong> &nbsp;|&nbsp; Tax & Audit Experts
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ NAVBAR ══ -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <div class="nav-item active">
+      <a href="#">Home</a>
+    </div>
+    <div class="nav-item">
+      <a href="#about-section">About Us</a>
+    </div>
+    <div class="nav-item">
+      <a href="#services-section">Services <i class="fas fa-chevron-down caret"></i></a>
+      <ul class="dropdown">
+        <li><a href="#" onclick="openSvc('itr'); return false;"><i class="fas fa-file-invoice-dollar"></i> Income Tax Filing</a></li>
+        <li><a href="#" onclick="openSvc('gst'); return false;"><i class="fas fa-receipt"></i> GST Registration & Filing</a></li>
+        <li><a href="#" onclick="openSvc('company'); return false;"><i class="fas fa-building"></i> Company Registration</a></li>
+        <li><a href="#" onclick="openSvc('accounting'); return false;"><i class="fas fa-book-open"></i> Accounting & Bookkeeping</a></li>
+        <li><a href="#" onclick="openSvc('roc'); return false;"><i class="fas fa-clipboard-check"></i> Business Compliance</a></li>
+        <li><a href="#" onclick="openSvc('audit'); return false;"><i class="fas fa-magnifying-glass-chart"></i> Audit & Assurance</a></li>
+        <li><a href="#" onclick="openSvc('advisory'); return false;"><i class="fas fa-chart-pie"></i> Financial Advisory</a></li>
+        <li><a href="#" onclick="openSvc('certification'); return false;"><i class="fas fa-certificate"></i> Certification Services</a></li>
+      </ul>
+    </div>
+    <div class="nav-item">
+      <a href="#" onclick="openQuery(); return false;">Query</a>
+    </div>
+    <div class="nav-item">
+      <a href="#" onclick="openCareers(); return false;">Careers</a>
+    </div>
+    <div class="nav-item">
+      <a href="#" onclick="openContact(); return false;">Contact Us</a>
+    </div>
+  </div>
+  <button class="hamburger-btn" id="hamburgerBtn" onclick="toggleMobile()">
+    <i class="fas fa-bars"></i>
+  </button>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="#" onclick="closeMobile()">Home</a>
+  <a href="#about-section" onclick="closeMobile()">About Us</a>
+  <a href="#services-section" onclick="closeMobile()">Services</a>
+  <a href="#" onclick="openSvc('itr'); closeMobile();">Income Tax Filing</a>
+  <a href="#" onclick="openSvc('gst'); closeMobile();">GST Registration & Filing</a>
+  <a href="#" onclick="openSvc('company'); closeMobile();">Company Registration</a>
+  <a href="#" onclick="openSvc('accounting'); closeMobile();">Accounting & Bookkeeping</a>
+  <a href="#" onclick="openSvc('audit'); closeMobile();">Audit & Assurance</a>
+  <a href="#" onclick="openQuery(); closeMobile();">Query</a>
+  <a href="#" onclick="openCareers(); closeMobile();">Careers</a>
+  <a href="#" onclick="openContact(); closeMobile();">Contact Us</a>
+</div>
+
+<!-- ══ HERO SLIDER ══ -->
+<div class="hero" id="heroSlider">
+  <div class="hero-geo"></div>
+
+  <div class="hero-slide hero-slide-1 active">
+    <div class="hero-content">
+      <div class="hero-tag"><i class="fas fa-star"></i> &nbsp; Trusted CA Firm – Mumbai</div>
+      <h2 class="hero-title">
+        Welcome to<br>
+        PSV Jain <em>& Associates</em>
+      </h2>
+      <p class="hero-sub">
+        Chartered Accountants providing professional accounting, taxation, compliance, and financial advisory services in Mumbai since 2010.
+      </p>
+    </div>
+  </div>
+
+  <div class="hero-slide hero-slide-2">
+    <div class="hero-content">
+      <div class="hero-tag"><i class="fas fa-shield-halved"></i> &nbsp; Expert Tax & GST Services</div>
+      <h2 class="hero-title">
+        Accurate &amp; Timely<br>
+        <em>Tax Compliance</em>
+      </h2>
+      <p class="hero-sub">
+        Income Tax Filing, GST Registration & Returns, TDS compliance, and comprehensive tax planning for individuals and corporates.
+      </p>
+    </div>
+  </div>
+
+  <div class="hero-slide hero-slide-3">
+    <div class="hero-content">
+      <div class="hero-tag"><i class="fas fa-chart-line"></i> &nbsp; Business Growth Advisory</div>
+      <h2 class="hero-title">
+        Financial Advisory<br>
+        <em>& Audit Services</em>
+      </h2>
+      <p class="hero-sub">
+        Company registration, statutory audits, business compliance, and financial advisory for startups and established businesses across India.
+      </p>
+    </div>
+  </div>
+
+  <div class="hero-dots">
+    <button class="dot active" onclick="goSlide(0)"></button>
+    <button class="dot" onclick="goSlide(1)"></button>
+    <button class="dot" onclick="goSlide(2)"></button>
+  </div>
+</div>
+
+<!-- ══ IMPORTANT DATES TICKER ══ -->
+<div class="ticker-wrap">
+  <div class="ticker-label">
+    <i class="fas fa-calendar-exclamation"></i> Important Dates
+  </div>
+  <div class="ticker-track">
+    <div class="ticker-inner" id="tickerInner">
+      <span class="ticker-item"><span class="date-badge">10/03/2026</span><strong>GSTR-7 & GSTR-8 for February 2026</strong></span>
+      <span class="ticker-sep">◆</span>
+      <span class="ticker-item"><span class="date-badge">11/03/2026</span><strong>GSTR-1 Monthly for February 2026</strong></span>
+      <span class="ticker-sep">◆</span>
+      <span class="ticker-item"><span class="date-badge">15/03/2026</span><strong>ESI & PF E-Payment for February 2026</strong></span>
+      <span class="ticker-sep">◆</span>
+      <span class="ticker-item"><span class="date-badge">15/03/2026</span><strong>Advance Tax – 4th Instalment (100%) for FY 2025-26</strong></span>
+      <span class="ticker-sep">◆</span>
+      <span class="ticker-item"><span class="date-badge">20/03/2026</span><strong>GSTR-3B Monthly for February 2026</strong></span>
+      <span class="ticker-sep">◆</span>
+      <span class="ticker-item"><span class="date-badge">25/03/2026</span><strong>GST PMT-06 under QRMP Scheme for February 2026</strong></span>
+      <span class="ticker-sep">◆</span>
+      <span class="ticker-item"><span class="date-badge">31/03/2026</span><strong>Opt for Composition Scheme for FY 2026-27</strong></span>
+      <span class="ticker-sep">◆</span>
+      <span class="ticker-item"><span class="date-badge">31/03/2026</span><strong>Balance Advance Tax to avoid interest u/s 234B</strong></span>
+      <span class="ticker-sep">◆</span>
+      <span class="ticker-item"><span class="date-badge">31/03/2026</span><strong>Updated ITR (ITR-U) for AY 2024-25 with 25% additional tax</strong></span>
+      <span class="ticker-sep">◆</span>
+      <span class="ticker-item"><span class="date-badge">31/03/2026</span><strong>LUT filing for Exporters for FY 2026-27</strong></span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ STATS BAND ══ -->
+<div class="stats-band">
+  <div class="stats-band-inner">
+    <div class="stat-col">
+      <div class="stat-num">500<span class="stat-unit">+</span></div>
+      <div class="stat-label">Happy Clients Served</div>
+    </div>
+    <div class="stat-col">
+      <div class="stat-num">10<span class="stat-unit">+</span></div>
+      <div class="stat-label">Years of Experience</div>
+    </div>
+    <div class="stat-col">
+      <div class="stat-num">5.0<span class="stat-unit">★</span></div>
+      <div class="stat-label">Google Rating</div>
+    </div>
+    <div class="stat-col">
+      <div class="stat-num">100<span class="stat-unit">%</span></div>
+      <div class="stat-label">Compliance Accuracy</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MAIN CONTENT ══ -->
+<div class="main-wrap">
+
+  <!-- LEFT COLUMN -->
+  <div>
+
+    <!-- ABOUT -->
+    <div class="section-card" id="about-section">
+      <div class="section-head">
+        <i class="fas fa-building-columns"></i>
+        <h2>Welcome to PSV Jain & Associates</h2>
+        <div class="line"></div>
+      </div>
+      <div class="section-body">
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              <strong>PSV Jain & Associates</strong> is a renowned Chartered Accountant firm based in <strong>Borivali East, Mumbai</strong>. We are a trusted CA firm providing comprehensive financial services for individuals, startups, and businesses across Maharashtra and India.
+            </p>
+            <p>
+              We provide all types of CA services in Mumbai related to <strong>accounting, auditing, income tax, GST, company registration, business compliance, financial advisory</strong>, and more. Our commitment to accuracy, timeliness, and personalized service sets us apart.
+            </p>
+            <p>
+              With a team of qualified Chartered Accountants, we ensure every filing is precise, every compliance is met on time, and every client receives dedicated professional attention.
+            </p>
+            <div style="margin-top:14px">
+              <a href="#" onclick="openQuery(); return false;" class="btn-gold" style="font-size:12.5px; padding:9px 20px;">
+                <i class="fas fa-calendar-check"></i> Book a Free Consultation
+              </a>
+              &nbsp;
+              <a href="#" onclick="openAbout(); return false;" style="font-size:12.5px; color:var(--navy); font-weight:600; text-decoration:underline; text-underline-offset:3px;">
+                Read More →
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="about-highlights">
+              <h4><i class="fas fa-star" style="color:var(--gold); margin-right:6px"></i>Why Choose Us</h4>
+              <div class="highlight-item"><i class="fas fa-check-circle"></i> 24 Hour Online Support Available</div>
+              <div class="highlight-item"><i class="fas fa-check-circle"></i> Dedicated Expert CA Team</div>
+              <div class="highlight-item"><i class="fas fa-check-circle"></i> Business Consulting & Advisory</div>
+              <div class="highlight-item"><i class="fas fa-check-circle"></i> ICAI Registered Professionals</div>
+              <div class="highlight-item"><i class="fas fa-check-circle"></i> Accurate & Timely Filings</div>
+              <div class="highlight-item"><i class="fas fa-check-circle"></i> Personalized Financial Guidance</div>
+              <div class="highlight-item"><i class="fas fa-check-circle"></i> Strict Data Confidentiality</div>
+              <div class="highlight-item"><i class="fas fa-check-circle"></i> Trusted by 500+ Clients in Mumbai</div>
+            </div>
+            <div class="contact-block" style="margin-top:14px">
+              <h4><i class="fas fa-location-dot" style="color:var(--gold); margin-right:6px"></i>Contact Us</h4>
+              <div class="contact-row">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>105, Yashwant Shopping Centre, Kasturba Road No. 7, Chinchpada, Borivali East, Mumbai – 400066</span>
+              </div>
+              <div class="contact-row">
+                <i class="fas fa-envelope"></i>
+                <span><a href="/cdn-cgi/l/email-protection#8efefdf8e4efe7e0a0e1e8e8e7edebcee9e3efe7e2a0ede1e3"><span class="__cf_email__" data-cfemail="f58586839f949c9bdb9a93939c9690b59298949c99db969a98">[email&#160;protected]</span></a></span>
+              </div>
+              <div class="contact-row">
+                <i class="fas fa-star" style="color:var(--gold)"></i>
+                <span style="color:var(--gold); font-weight:600">★★★★★ 5.0 – Google Reviews</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="why-grid">
+          <div class="why-item">
+            <i class="fas fa-clock"></i>
+            <h4>24 Hr Support</h4>
+            <p>Always available for your queries</p>
+          </div>
+          <div class="why-item">
+            <i class="fas fa-user-tie"></i>
+            <h4>Expert Team</h4>
+            <p>Qualified CAs & tax specialists</p>
+          </div>
+          <div class="why-item">
+            <i class="fas fa-shield-halved"></i>
+            <h4>100% Accurate</h4>
+            <p>Zero errors, zero missed deadlines</p>
+          </div>
+          <div class="why-item">
+            <i class="fas fa-chart-line"></i>
+            <h4>Growth Advisory</h4>
+            <p>Strategic financial planning</p>
+          </div>
+          <div class="why-item">
+            <i class="fas fa-lock"></i>
+            <h4>Confidential</h4>
+            <p>Strict data privacy standards</p>
+          </div>
+          <div class="why-item">
+            <i class="fas fa-handshake"></i>
+            <h4>Client-First</h4>
+            <p>Personalized service always</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="section-card" id="services-section">
+      <div class="section-head">
+        <i class="fas fa-briefcase"></i>
+        <h2>Our Services</h2>
+        <div class="line"></div>
+      </div>
+      <div class="section-body">
+        <div class="services-grid">
+
+          <div class="service-card" onclick="openSvc('itr')">
+            <div class="service-card-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+            <h3>Income Tax Filing</h3>
+            <p>Accurate ITR filing for individuals, HUFs, firms & corporates. Tax planning and optimization included.</p>
+            <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+          </div>
+
+          <div class="service-card" onclick="openSvc('gst')">
+            <div class="service-card-icon"><i class="fas fa-receipt"></i></div>
+            <h3>GST Registration & Filing</h3>
+            <p>Complete GST lifecycle – registration, GSTR-1, GSTR-3B, reconciliation, and audit support.</p>
+            <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+          </div>
+
+          <div class="service-card" onclick="openSvc('audit')">
+            <div class="service-card-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+            <h3>Audit & Assurance</h3>
+            <p>Statutory audits, internal audits, tax audits, management audits for corporate & other entities.</p>
+            <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+          </div>
+
+          <div class="service-card" onclick="openSvc('company')">
+            <div class="service-card-icon"><i class="fas fa-building"></i></div>
+            <h3>Company Registration</h3>
+            <p>Pvt Ltd, LLP, OPC, Partnership incorporation with complete MCA & regulatory compliance.</p>
+            <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+          </div>
+
+          <div class="service-card" onclick="openSvc('accounting')">
+            <div class="service-card-icon"><i class="fas fa-book-open"></i></div>
+            <h3>Accounting & Bookkeeping</h3>
+            <p>Systematic, accurate bookkeeping, ledger maintenance, and financial statement preparation.</p>
+            <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+          </div>
+
+          <div class="service-card" onclick="openSvc('roc')">
+            <div class="service-card-icon"><i class="fas fa-clipboard-check"></i></div>
+            <h3>ROC / Business Compliance</h3>
+            <p>Annual filings, board meetings, ROC compliance, statutory registers for Companies & LLPs.</p>
+            <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+          </div>
+
+          <div class="service-card" onclick="openSvc('advisory')">
+            <div class="service-card-icon"><i class="fas fa-chart-pie"></i></div>
+            <h3>Financial Advisory</h3>
+            <p>Strategic financial planning, investment structuring, and business advisory for growth.</p>
+            <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+          </div>
+
+          <div class="service-card" onclick="openSvc('certification')">
+            <div class="service-card-icon"><i class="fas fa-certificate"></i></div>
+            <h3>Certification Services</h3>
+            <p>FEMA, RBI, Income Tax Act and net worth certifications for various regulatory purposes.</p>
+            <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+          </div>
+
+          <div class="service-card" onclick="openSvc('consulting')">
+            <div class="service-card-icon"><i class="fas fa-handshake-angle"></i></div>
+            <h3>Consulting & Registrations</h3>
+            <p>Business setup consulting, MSME/FSSAI/Trade License registrations and back-office services.</p>
+            <div class="read-more">Read More <i class="fas fa-arrow-right"></i></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end left col -->
+
+  <!-- RIGHT SIDEBAR -->
+  <div class="sidebar">
+
+    <!-- Google Rating -->
+    <div class="sidebar-card">
+      <div class="sidebar-head">
+        <i class="fab fa-google"></i>
+        <h3>Google Rating</h3>
+      </div>
+      <div class="sidebar-body">
+        <div class="rating-box">
+          <div class="rating-num-big">5.0</div>
+          <div class="rating-stars-big">★★★★★</div>
+          <div class="rating-label">Based on Google Reviews</div>
+          <div class="rating-divider"></div>
+          <div class="rating-testimonial">
+            "Professional and reliable CA services. Highly recommended for all accounting and tax needs."
+            <div class="rating-author">— Rahul M., Mumbai</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Important Dates -->
+    <div class="sidebar-card">
+      <div class="sidebar-head">
+        <i class="fas fa-calendar-days"></i>
+        <h3>Important Dates</h3>
+        <span style="margin-left:auto;font-size:10px;color:rgba(255,255,255,0.6);">March 2026</span>
+      </div>
+      <div class="sidebar-body" style="padding:0;">
+        <div class="dates-list" id="datesList">
+          <div class="date-item"><span class="date-badge-block">10 Mar</span><span class="date-text">GSTR-7 & GSTR-8 for February 2026</span></div>
+          <div class="date-item"><span class="date-badge-block">11 Mar</span><span class="date-text">GSTR-1 Monthly for February 2026</span></div>
+          <div class="date-item"><span class="date-badge-block">13 Mar</span><span class="date-text">GSTR-5 & GSTR-6 for February 2026</span></div>
+          <div class="date-item"><span class="date-badge-block">15 Mar</span><span class="date-text">ESI & PF E-Payment for February 2026</span></div>
+          <div class="date-item"><span class="date-badge-block">15 Mar</span><span class="date-text">Advance Tax – 4th Instalment (100%) for FY 2025-26</span></div>
+          <div class="date-item"><span class="date-badge-block">20 Mar</span><span class="date-text">GSTR-3B Monthly for February 2026</span></div>
+          <div class="date-item"><span class="date-badge-block">25 Mar</span><span class="date-text">GST PMT-06 under QRMP Scheme for February 2026</span></div>
+          <div class="date-item"><span class="date-badge-block">30 Mar</span><span class="date-text">TDS on Purchase of Property – Form 26QB for February</span></div>
+          <div class="date-item"><span class="date-badge-block">31 Mar</span><span class="date-text">Opt for Composition Scheme for FY 2026-27</span></div>
+          <div class="date-item"><span class="date-badge-block">31 Mar</span><span class="date-text">Balance Advance Tax payment to avoid interest u/s 234B</span></div>
+          <div class="date-item"><span class="date-badge-block">31 Mar</span><span class="date-text">Updated ITR (ITR-U) for AY 2024-25 with 25% additional tax</span></div>
+          <div class="date-item"><span class="date-badge-block">31 Mar</span><span class="date-text">LUT filing for Exporters for FY 2026-27</span></div>
+          <div class="date-item"><span class="date-badge-block">31 Mar</span><span class="date-text">Complete CPE Hours for 2025 – cpeapp.icai.org</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- What's New -->
+    <div class="sidebar-card">
+      <div class="sidebar-head">
+        <i class="fas fa-newspaper"></i>
+        <h3>What's New</h3>
+      </div>
+      <div class="sidebar-body" style="padding:0;">
+        <div class="news-list" id="newsList" style="padding:0 14px;">
+          <div class="news-item"><span class="news-date">07 Mar 26</span><div class="news-text"><a href="#">India's CAD widens to $13.2 billion in Q3 on higher trade deficit: RBI</a></div></div>
+          <div class="news-item"><span class="news-date">06 Mar 26</span><div class="news-text"><a href="#">SEBI revamps mutual fund categories — key changes for investors</a></div></div>
+          <div class="news-item"><span class="news-date">02 Mar 26</span><div class="news-text"><a href="#">GST collection rises 8.1% to ₹1.83 lakh crore in February 2026</a></div></div>
+          <div class="news-item"><span class="news-date">01 Mar 26</span><div class="news-text"><a href="#">CBDT notifies ITR forms for AY 2026-27 — key changes explained</a></div></div>
+          <div class="news-item"><span class="news-date">07 Feb 26</span><div class="news-text"><a href="#">RBI cuts repo rate by 25 bps to 6.25% — first cut in 5 years</a></div></div>
+          <div class="news-item"><span class="news-date">01 Feb 26</span><div class="news-text"><a href="#">Union Budget 2026 — No income tax up to ₹12 lakh under New Regime</a></div></div>
+          <div class="news-item"><span class="news-date">01 Feb 26</span><div class="news-text"><a href="#">Budget 2026: TDS & TCS thresholds revised — full list of changes</a></div></div>
+          <div class="news-item"><span class="news-date">15 Jan 26</span><div class="news-text"><a href="#">MCA mandates additional disclosures in Board's Report for FY 2025-26</a></div></div>
+        </div>
+        <div style="padding:8px 14px 12px;text-align:right;">
+          <a href="#" style="font-size:12px;color:var(--gold);font-weight:600;">View All News →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="sidebar-card">
+      <div class="sidebar-head">
+        <i class="fas fa-link"></i>
+        <h3>Quick Links</h3>
+      </div>
+      <div class="sidebar-body">
+        <div class="quick-links">
+          <a href="https://www.incometaxindia.gov.in" target="_blank" class="quick-link-item">
+            <i class="fas fa-arrow-right"></i> Income Tax Department
+          </a>
+          <a href="https://incometaxindiaefiling.gov.in" target="_blank" class="quick-link-item">
+            <i class="fas fa-arrow-right"></i> Income Tax e-Filing Portal
+          </a>
+          <a href="https://www.gst.gov.in" target="_blank" class="quick-link-item">
+            <i class="fas fa-arrow-right"></i> GST Portal
+          </a>
+          <a href="https://www.mca.gov.in" target="_blank" class="quick-link-item">
+            <i class="fas fa-arrow-right"></i> Ministry of Corporate Affairs
+          </a>
+          <a href="https://www.icai.org" target="_blank" class="quick-link-item">
+            <i class="fas fa-arrow-right"></i> Institute of CA of India (ICAI)
+          </a>
+          <a href="https://www.rbi.org.in" target="_blank" class="quick-link-item">
+            <i class="fas fa-arrow-right"></i> Reserve Bank of India
+          </a>
+          <a href="https://www.sebi.gov.in" target="_blank" class="quick-link-item">
+            <i class="fas fa-arrow-right"></i> Securities & Exchange Board (SEBI)
+          </a>
+          <a href="https://www.tin-nsdl.com" target="_blank" class="quick-link-item">
+            <i class="fas fa-arrow-right"></i> NSDL (e-payment & Refund Status)
+          </a>
+          <a href="https://www.epfindia.gov.in" target="_blank" class="quick-link-item">
+            <i class="fas fa-arrow-right"></i> EPFO Portal
+          </a>
+          <a href="https://www.esic.in" target="_blank" class="quick-link-item">
+            <i class="fas fa-arrow-right"></i> ESIC Portal
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Have a Query -->
+    <div class="sidebar-card" id="contact-section">
+      <div class="sidebar-head">
+        <i class="fas fa-circle-question"></i>
+        <h3>Have a Query?</h3>
+      </div>
+      <div class="sidebar-body" style="text-align:center; padding:20px 16px;">
+        <div style="font-size:32px; color:var(--navy); margin-bottom:10px;">
+          <i class="fas fa-comments"></i>
+        </div>
+        <p style="font-size:13px; color:var(--text-mid); margin-bottom:16px; line-height:1.6;">
+          Have a question about our services? Send us your query and our CA team will respond within 24 hours.
+        </p>
+        <a href="#" onclick="openQuery(); return false;" class="btn-gold" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+          <i class="fas fa-paper-plane"></i> Send Your Query
+        </a>
+        <div style="margin-top:12px; font-size:12px; color:var(--text-light);">
+          <i class="fas fa-envelope" style="color:var(--gold);"></i>
+          <a href="/cdn-cgi/l/email-protection#651516130f040c0b4b0a03030c0600250208040c094b060a08" style="color:var(--gold);"><span class="__cf_email__" data-cfemail="1c6c6f6a767d757232737a7a757f795c7b717d7570327f7371">[email&#160;protected]</span></a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end sidebar -->
+
+</div><!-- end main-wrap -->
+
+<!-- ══ SERVICE DETAIL PAGE ══ -->
+<div class="svc-detail-page" id="svcDetailPage" style="display:none;">
+  <div class="svc-detail-wrap">
+    <div class="svc-detail-breadcrumb">
+      <button onclick="closeSvcPage()"><i class="fas fa-arrow-left"></i> Back to Services</button>
+      <span><i class="fas fa-home"></i> Home</span>
+      <span><i class="fas fa-chevron-right"></i></span>
+      <span>Services</span>
+      <span><i class="fas fa-chevron-right"></i></span>
+      <span id="svcPageBreadcrumb" style="color:var(--gold);font-weight:600;"></span>
+    </div>
+    <div id="svcDetailContent"></div>
+  </div>
+</div>
+
+
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <div>
+      <h3>Ready to simplify your finances?</h3>
+      <p>Schedule a free consultation with PSV Jain & Associates. Serving clients across Mumbai & Maharashtra.</p>
+    </div>
+    <a href="#" onclick="openFreeConsult(); return false;" class="btn-white">
+      <i class="fas fa-calendar-check"></i> Book Free Consultation
+    </a>
+  </div>
+</div>
+
+<!-- ══ DISCLAIMER ══ -->
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+                  <div class="logo-emblem">
+          <img src="data:image/png;base64,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" alt="CA India Logo" style="width:56px;height:56px;object-fit:contain;">
+        </div>
+          <div class="logo-text">
+            <h1>PSV Jain <em>&</em> Associates</h1>
+            <p>Chartered Accountants · Mumbai</p>
+          </div>
+        </div>
+        <p>
+          A trusted Chartered Accountant firm in Mumbai providing professional accounting, taxation, audit, and financial advisory services to individuals, startups, and businesses across India.
+        </p>
+        <div class="footer-address">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>105, Yashwant Shopping Centre, Kasturba Road No. 7, Chinchpada, Borivali East, Mumbai – 400066, Maharashtra, India</span>
+        </div>
+        <div class="footer-address">
+          <i class="fas fa-envelope"></i>
+          <span><a href="/cdn-cgi/l/email-protection#86f6f5f0ece7efe8a8e9e0e0efe5e3c6e1ebe7efeaa8e5e9eb" style="color:#6a80a0;"><span class="__cf_email__" data-cfemail="512122273b30383f7f3e373738323411363c30383d7f323e3c">[email&#160;protected]</span></a></span>
+        </div>
+        <div class="footer-address">
+          <i class="fas fa-star" style="color:var(--gold)"></i>
+          <span style="color:var(--gold-light);">★★★★★ 5.0 – Google Reviews</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="#about-section"><i class="fas fa-chevron-right"></i> About Us</a></li>
+          <li><a href="#services-section"><i class="fas fa-chevron-right"></i> Our Services</a></li>
+          <li><a href="#" onclick="openQuery(); return false;"><i class="fas fa-chevron-right"></i> Send a Query</a></li>
+          <li><a href="#" onclick="openCareers(); return false;"><i class="fas fa-chevron-right"></i> Careers</a></li>
+          <li><a href="#" onclick="openContact(); return false;"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services-section"><i class="fas fa-chevron-right"></i> Income Tax Filing</a></li>
+          <li><a href="#services-section"><i class="fas fa-chevron-right"></i> GST Services</a></li>
+          <li><a href="#services-section"><i class="fas fa-chevron-right"></i> Audit & Assurance</a></li>
+          <li><a href="#services-section"><i class="fas fa-chevron-right"></i> Company Registration</a></li>
+          <li><a href="#services-section"><i class="fas fa-chevron-right"></i> Accounting & Bookkeeping</a></li>
+          <li><a href="#services-section"><i class="fas fa-chevron-right"></i> Business Compliance</a></li>
+          <li><a href="#services-section"><i class="fas fa-chevron-right"></i> Financial Advisory</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-useful">
+        <h4>Useful Links</h4>
+        <a href="https://www.incometaxindia.gov.in" target="_blank"><i class="fas fa-external-link-alt"></i> Income Tax Department</a>
+        <a href="https://www.gst.gov.in" target="_blank"><i class="fas fa-external-link-alt"></i> GST Portal</a>
+        <a href="https://www.mca.gov.in" target="_blank"><i class="fas fa-external-link-alt"></i> Ministry of Corporate Affairs</a>
+        <a href="https://www.icai.org" target="_blank"><i class="fas fa-external-link-alt"></i> ICAI</a>
+        <a href="https://www.wirc-icai.org" target="_blank"><i class="fas fa-external-link-alt"></i> WIRC of ICAI</a>
+        <a href="https://www.rbi.org.in" target="_blank"><i class="fas fa-external-link-alt"></i> Reserve Bank of India</a>
+        <a href="https://www.sebi.gov.in" target="_blank"><i class="fas fa-external-link-alt"></i> SEBI</a>
+        <a href="https://www.tin-nsdl.com" target="_blank"><i class="fas fa-external-link-alt"></i> NSDL e-Payment</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 <span>PSV Jain & Associates</span>. All Rights Reserved. Chartered Accountants – Mumbai.</p>
+      <div class="footer-visits">
+        <span>Visitors:</span>
+        <span class="visits-count">265,829+</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ QUERY MODAL ══ -->
+<div class="modal-overlay" id="queryModal" onclick="closeQueryOutside(event)">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3><i class="fas fa-headset" style="color:var(--gold); margin-right:8px"></i>Send Your Query</h3>
+      <button class="modal-close" onclick="closeQuery()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="form-row-2">
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="+91 XXXXX XXXXX">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email Address *</label>
+        <input type="email" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label>Service Required</label>
+        <select>
+          <option value="">Select a service</option>
+          <option>Income Tax Filing</option>
+          <option>GST Registration & Filing</option>
+          <option>Company Registration</option>
+          <option>Accounting & Bookkeeping</option>
+          <option>Audit & Assurance</option>
+          <option>Business Compliance</option>
+          <option>Financial Advisory</option>
+          <option>Certification Services</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Your Query *</label>
+        <textarea placeholder="Describe your query or requirement..."></textarea>
+      </div>
+      <button class="form-submit-btn" onclick="submitQuery(this)">
+        <i class="fas fa-paper-plane"></i> &nbsp; Submit Query
+      </button>
+      <p style="font-size:11px; color:#9aabb0; margin-top:10px; text-align:center;">
+        <i class="fas fa-lock" style="color:var(--gold)"></i> &nbsp; Your information is confidential and secure.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ── SERVICE TABS ──
+function showService(id, btn) {
+  // Hide all panels
+  document.querySelectorAll('.svc-panel').forEach(p => p.classList.remove('active'));
+  // Deactivate all buttons
+  document.querySelectorAll('.svc-tab-btn').forEach(b => b.classList.remove('active'));
+  // Show selected panel
+  const panel = document.getElementById('svc-' + id);
+  if (panel) panel.classList.add('active');
+  // Activate clicked button
+  if (btn) btn.classList.add('active');
+}
+
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.dot');
+
+function goSlide(n) {
+  slides[currentSlide].classList.remove('active');
+  dots[currentSlide].classList.remove('active');
+  currentSlide = n;
+  slides[currentSlide].classList.add('active');
+  dots[currentSlide].classList.add('active');
+}
+setInterval(() => {
+  goSlide((currentSlide + 1) % slides.length);
+}, 5000);
+
+// ── MOBILE NAV ──
+function toggleMobile() {
+  const nav = document.getElementById('mobileNav');
+  nav.classList.toggle('open');
+}
+function closeMobile() {
+  document.getElementById('mobileNav').classList.remove('open');
+}
+
+// ── QUERY MODAL ──
+function openQuery() {
+  document.getElementById('queryModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeQuery() {
+  document.getElementById('queryModal').classList.remove('open');
+    document.body.style.overflow = '';
+}
+function closeQueryOutside(e) {
+  if (e.target === document.getElementById('queryModal')) closeQuery();
+}
+function submitQuery(btn) {
+  btn.innerHTML = '<i class="fas fa-check"></i> &nbsp; Query Sent Successfully!';
+  btn.style.background = '#2d7a4a';
+  setTimeout(() => {
+    closeQuery();
+    btn.innerHTML = '<i class="fas fa-paper-plane"></i> &nbsp; Submit Query';
+    btn.style.background = '';
+  }, 2500);
+}
+
+// ── STICKY HEADER SHADOW ──
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.header');
+  header.style.boxShadow = window.scrollY > 10
+    ? '0 4px 20px rgba(26,39,68,0.15)'
+    : '0 2px 12px rgba(26,39,68,0.08)';
+});
+
+// ── SMOOTH SCROLL WITH OFFSET (accounts for sticky header + navbar) ──
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const targetId = this.getAttribute('href');
+    if (!targetId || targetId === '#') return;
+    const target = document.querySelector(targetId);
+    if (!target) return;
+    e.preventDefault();
+    const headerH = document.querySelector('.header')?.offsetHeight || 0;
+    const navbarH = document.querySelector('.navbar')?.offsetHeight || 0;
+    const offset = headerH + navbarH + 10;
+    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+});
+
+// ── ACTIVE NAV HIGHLIGHT ──
+const navSections = [
+  { id: 'about-section',   link: 'About Us' },
+  { id: 'services-section', link: 'Services' },
+  { id: 'contact-section',  link: 'Contact Us' }
+];
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY + 160;
+  navSections.forEach(({ id, link }) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const navLink = [...document.querySelectorAll('.nav-item > a')]
+      .find(a => a.textContent.trim().startsWith(link));
+    if (!navLink) return;
+    const top = el.offsetTop;
+    const bottom = top + el.offsetHeight;
+    if (scrollY >= top && scrollY < bottom) {
+      navLink.closest('.nav-item').classList.add('active');
+    } else {
+      navLink.closest('.nav-item').classList.remove('active');
+    }
+  });
+});
+</script>
+
+<!-- ══ SERVICE DETAIL MODAL ══ -->
+<div class="svc-modal-overlay" id="svcModal" onclick="closeSvcOutside(event)">
+  <div class="svc-modal-box">
+    <div class="svc-modal-header" id="svcModalHeader">
+      <div class="svc-modal-icon" id="svcModalIcon"></div>
+      <div>
+        <h2 id="svcModalTitle"></h2>
+        <p id="svcModalTagline"></p>
+      </div>
+      <button class="svc-modal-close" onclick="closeSvc()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="svc-modal-body" id="svcModalBody"></div>
+    <div class="svc-modal-footer">
+      <a href="#" onclick="closeSvc(); openQuery(); return false;" class="btn-gold"><i class="fas fa-paper-plane"></i> &nbsp;Send Enquiry</a>
+      <button onclick="closeSvc()" class="svc-modal-close-btn">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── SERVICE MODAL DATA ──
+const SVC_DATA = {
+  itr: {
+    icon: '<i class="fas fa-file-invoice-dollar"></i>',
+    title: 'Income Tax Filing',
+    tagline: 'Accurate, timely ITR filing with complete tax planning for individuals & businesses.',
+    body: `
+      <div class="svc-blk">
+        <h4><i class="fas fa-info-circle"></i> Overview</h4>
+        <p>PSV Jain & Associates provides end-to-end Income Tax filing for individuals (salaried, self-employed), HUFs, partnership firms, LLPs, and corporates. We ensure accurate computation, timely submission, and maximum tax savings under the latest IT Act provisions including the New Tax Regime (FY 2025-26 / AY 2026-27).</p>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-list-check"></i> Services Included</h4>
+        <div class="svc-pts">
+          <div class="svc-pt"><i class="fas fa-check"></i> ITR-1 to ITR-7 filing for all categories</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> New vs Old Tax Regime analysis & selection</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Capital Gains computation (STCG / LTCG)</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> House Property & Rental Income reporting</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Business/Professional Income (44AD, 44ADA)</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Foreign Income & FEMA compliance</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Advance Tax computation & payment planning</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> TDS reconciliation & Form 26AS review</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Deductions u/s 80C, 80D, 80G, 80E etc.</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Updated ITR (ITR-U) filing</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Income Tax Notice handling & response</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Refund follow-up & status tracking</div>
+        </div>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-calendar-alt"></i> Key Due Dates (FY 2025-26 / AY 2026-27)</h4>
+        <div class="svc-dates">
+          <div class="svc-date-row"><span class="svc-badge">31 Jul 2026</span> ITR for Individuals (Non-Audit)</div>
+          <div class="svc-date-row"><span class="svc-badge">31 Oct 2026</span> ITR for Audit cases</div>
+          <div class="svc-date-row"><span class="svc-badge">15 Mar 2026</span> Advance Tax – 4th instalment</div>
+          <div class="svc-date-row"><span class="svc-badge">31 Dec 2026</span> Belated / Revised ITR</div>
+        </div>
+      </div>`
+  },
+  gst: {
+    icon: '<i class="fas fa-receipt"></i>',
+    title: 'GST Registration & Filing',
+    tagline: 'Complete GST compliance — registration, returns, audit and advisory under GST 2.0.',
+    body: `
+      <div class="svc-blk">
+        <h4><i class="fas fa-info-circle"></i> Overview</h4>
+        <p>Comprehensive GST services for businesses of all sizes — from new registrations and regular return filing to GST audits, reconciliations, and representation before authorities. We stay updated with all GST Council notifications to keep your business fully compliant.</p>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-list-check"></i> Services Included</h4>
+        <div class="svc-pts">
+          <div class="svc-pt"><i class="fas fa-check"></i> GST Registration (Regular, Composition, OIDAR)</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> GSTR-1 / IFF filing (monthly & quarterly)</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> GSTR-3B – Summary return & tax payment</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> GSTR-9 & GSTR-9C Annual Return & Reconciliation</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> QRMP Scheme management & advisory</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Input Tax Credit (ITC) reconciliation & reversal</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> E-Invoice & E-Way Bill compliance</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> GST Audit u/s 65 & 66</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> GST Refund claims (Export / Inverted Duty)</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> GST Notice replies & litigation support</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> LUT filing for Export of Goods/Services</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> GST Amendment & Cancellation</div>
+        </div>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-calendar-alt"></i> Monthly Due Dates</h4>
+        <div class="svc-dates">
+          <div class="svc-date-row"><span class="svc-badge">11th</span> GSTR-1 (Monthly filers)</div>
+          <div class="svc-date-row"><span class="svc-badge">13th</span> IFF for QRMP Scheme</div>
+          <div class="svc-date-row"><span class="svc-badge">20th</span> GSTR-3B (Monthly filers)</div>
+          <div class="svc-date-row"><span class="svc-badge">25th</span> GST PMT-06 (QRMP)</div>
+        </div>
+      </div>`
+  },
+  audit: {
+    icon: '<i class="fas fa-magnifying-glass-chart"></i>',
+    title: 'Audit & Assurance',
+    tagline: 'Independent, thorough audit services delivering credibility, compliance and confidence.',
+    body: `
+      <div class="svc-blk">
+        <h4><i class="fas fa-info-circle"></i> Overview</h4>
+        <p>Extensive experience in statutory audits, internal audits, tax audits, and management audits for corporates, partnership firms, trusts, and other entities. Our audit approach is risk-based and aligned with the latest Standards on Auditing (SAs) issued by ICAI and the Companies Act, 2013.</p>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-list-check"></i> Services Included</h4>
+        <div class="svc-pts">
+          <div class="svc-pt"><i class="fas fa-check"></i> Statutory Audit u/s 139 – Companies Act 2013</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Tax Audit u/s 44AB – Income Tax Act</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> GST Audit u/s 65 & 66 – GST Act</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Internal Audit & Process Review</div>
+
+          <div class="svc-pt"><i class="fas fa-check"></i> Stock & Debtors Audit</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Management / Systems Audit</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Trust / NGO / Society Audit</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Special Purpose Audit & Due Diligence</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> CARO 2020 reporting compliance</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Ind AS / IFRS financial statement review</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Report on Internal Financial Controls (IFC)</div>
+        </div>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-calendar-alt"></i> Key Due Dates</h4>
+        <div class="svc-dates">
+          <div class="svc-date-row"><span class="svc-badge">30 Sep</span> Tax Audit Report (Form 3CA/3CB)</div>
+          <div class="svc-date-row"><span class="svc-badge">31 Oct</span> ITR for Audit cases</div>
+          <div class="svc-date-row"><span class="svc-badge">31 Dec</span> GSTR-9C Annual Reconciliation</div>
+          <div class="svc-date-row"><span class="svc-badge">30 Nov</span> Statutory Audit – Company AGM</div>
+        </div>
+      </div>`
+  },
+  company: {
+    icon: '<i class="fas fa-building"></i>',
+    title: 'Company Registration',
+    tagline: 'Seamless incorporation of companies, LLPs and firms with end-to-end MCA compliance.',
+    body: `
+      <div class="svc-blk">
+        <h4><i class="fas fa-info-circle"></i> Overview</h4>
+        <p>We handle the complete incorporation process from name reservation to Certificate of Incorporation. We guide you on the best structure — Private Limited, LLP, OPC, or Partnership — based on your business needs, liability concerns, and tax implications under the Companies Act, 2013 and LLP Act, 2008.</p>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-list-check"></i> Services Included</h4>
+        <div class="svc-pts">
+          <div class="svc-pt"><i class="fas fa-check"></i> Private Limited Company (Pvt Ltd) incorporation</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Limited Liability Partnership (LLP) formation</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> One Person Company (OPC) registration</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Partnership Firm registration</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Sole Proprietorship setup & documentation</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Section 8 Company (NGO / Non-profit)</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> DIN & DSC procurement for directors</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> MOA & AOA drafting</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> PAN, TAN, GST, PF, ESI registration</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> MSME / Udyam Registration</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Startup India & DPIIT registration</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Nidhi Company registration</div>
+        </div>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-lightbulb"></i> Which Structure Suits You?</h4>
+        <div class="svc-dates">
+          <div class="svc-date-row"><span class="svc-badge">Pvt Ltd</span> Best for startups & businesses seeking funding</div>
+          <div class="svc-date-row"><span class="svc-badge">LLP</span> Professionals wanting limited liability + flexibility</div>
+          <div class="svc-date-row"><span class="svc-badge">OPC</span> Solo entrepreneurs wanting corporate identity</div>
+          <div class="svc-date-row"><span class="svc-badge">Partnership</span> Simple businesses with 2+ owners</div>
+        </div>
+      </div>`
+  },
+  accounting: {
+    icon: '<i class="fas fa-book-open"></i>',
+    title: 'Accounting & Bookkeeping',
+    tagline: 'Systematic, accurate financial recordkeeping aligned with Indian accounting standards.',
+    body: `
+      <div class="svc-blk">
+        <h4><i class="fas fa-info-circle"></i> Overview</h4>
+        <p>Professional bookkeeping, financial statement preparation, and MIS reporting using Tally, QuickBooks, and Zoho Books. Services are tailored for startups, SMEs, and large corporates complying with Indian Accounting Standards (Ind AS) and ICAI guidelines.</p>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-list-check"></i> Services Included</h4>
+        <div class="svc-pts">
+          <div class="svc-pt"><i class="fas fa-check"></i> Day-to-day bookkeeping & journal entries</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Accounts Payable & Receivable management</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Bank & credit card reconciliation</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Payroll processing & salary structuring</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Monthly P&L, Balance Sheet, Cash Flow</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Fixed Asset Register & depreciation schedules</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Inventory accounting & valuation</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> MIS Reports & management dashboards</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Finalization of accounts for audit readiness</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Tally ERP / Tally Prime setup & support</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Cloud accounting (Zoho Books, QuickBooks)</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Virtual CFO services</div>
+        </div>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-laptop"></i> Software We Work With</h4>
+        <div class="svc-dates">
+          <div class="svc-date-row"><span class="svc-badge">Tally Prime</span> Most widely used accounting software in India</div>
+          <div class="svc-date-row"><span class="svc-badge">Zoho Books</span> Cloud-based, GST-ready</div>
+          <div class="svc-date-row"><span class="svc-badge">QuickBooks</span> Ideal for startups & international businesses</div>
+          <div class="svc-date-row"><span class="svc-badge">MS Excel</span> Custom MIS & financial model reports</div>
+        </div>
+      </div>`
+  },
+  roc: {
+    icon: '<i class="fas fa-clipboard-check"></i>',
+    title: 'ROC / Business Compliance',
+    tagline: 'Complete ROC filings, annual returns & statutory compliance under Companies Act 2013.',
+    body: `
+      <div class="svc-blk">
+        <h4><i class="fas fa-info-circle"></i> Overview</h4>
+        <p>Every registered company and LLP must comply with mandatory annual and event-based filings under the Companies Act, 2013 and LLP Act, 2008. Non-compliance attracts heavy penalties. Our team ensures your company never misses a deadline and remains in good standing with the MCA / ROC.</p>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-list-check"></i> Services Included</h4>
+        <div class="svc-pts">
+          <div class="svc-pt"><i class="fas fa-check"></i> Annual Return – Form MGT-7 / MGT-7A</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Financial Statement filing – Form AOC-4</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Director KYC – Form DIR-3 KYC (annual)</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Board Meeting & AGM minutes drafting</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Statutory Registers maintenance</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Share Transfer, allotment & transmission</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Change of Directors / Registered Office</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Increase in Authorised Capital – Form SH-7</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> LLP Annual Return – Form 11 & Form 8</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> MSME payment compliance u/s 43B(h)</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Compounding of offences & condonation of delay</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Strike off / Closure of Companies & LLPs</div>
+        </div>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-calendar-alt"></i> Key Annual Due Dates</h4>
+        <div class="svc-dates">
+          <div class="svc-date-row"><span class="svc-badge">30 Sep</span> AOC-4 – Financial Statements</div>
+          <div class="svc-date-row"><span class="svc-badge">31 Oct</span> MGT-7 – Annual Return</div>
+          <div class="svc-date-row"><span class="svc-badge">30 Sep</span> DIR-3 KYC – Director KYC</div>
+          <div class="svc-date-row"><span class="svc-badge">30 Oct</span> LLP Form 11 – Annual Return</div>
+        </div>
+      </div>`
+  },
+  advisory: {
+    icon: '<i class="fas fa-chart-pie"></i>',
+    title: 'Financial Advisory',
+    tagline: 'Strategic financial planning, investment structuring and business growth advisory.',
+    body: `
+      <div class="svc-blk">
+        <h4><i class="fas fa-info-circle"></i> Overview</h4>
+        <p>We serve as your trusted financial partner — helping you make informed decisions about your business finances, tax planning, investments, and growth strategy. Advisory services tailored for startups, SMEs, HNIs, and family businesses looking to optimise wealth and minimise tax outflow legally.</p>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-list-check"></i> Services Included</h4>
+        <div class="svc-pts">
+          <div class="svc-pt"><i class="fas fa-check"></i> Tax planning & optimization strategies</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Business structuring & restructuring advice</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Investment planning & portfolio advisory</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Cash flow & working capital management</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Financial projections & business plan prep</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Due diligence for mergers & acquisitions</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Virtual CFO services for startups & SMEs</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Loan & fund raising advisory (CC, OD, Term)</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Succession & estate planning</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Transfer pricing advisory</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> HNI wealth structuring & family office advisory</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> NRI taxation & FEMA advisory</div>
+        </div>
+      </div>`
+  },
+  certification: {
+    icon: '<i class="fas fa-certificate"></i>',
+    title: 'Certification Services',
+    tagline: 'CA certificates for RBI, FEMA, Income Tax, Visa, Net Worth and regulatory purposes.',
+    body: `
+      <div class="svc-blk">
+        <h4><i class="fas fa-info-circle"></i> Overview</h4>
+        <p>We issue CA Certificates required for various regulatory, legal, banking, and visa purposes. All certificates are signed by our ICAI-registered Chartered Accountants and are accepted by banks, regulatory authorities (RBI, FEMA, Income Tax), embassies, and courts.</p>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-list-check"></i> Certificates We Issue</h4>
+        <div class="svc-pts">
+          <div class="svc-pt"><i class="fas fa-check"></i> Net Worth Certificate (banks, visa, tenders)</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Income Certificate (scholarship, visa, courts)</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> RBI / FEMA compliance certificate</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Form 15CA / 15CB – Foreign remittance</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Turnover Certificate (tenders & bank loans)</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Fund Utilization Certificate (NGOs & grants)</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Export Certificate for FEMA / RBI</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Working Capital / Projected Balance Sheet</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> CA Certificate for Visa (UK, US, Schengen)</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Computation of Income Certificate</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Certificate under MSME / Udyam scheme</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Stock / Debtor statement for CC limits</div>
+        </div>
+      </div>`
+  },
+  consulting: {
+    icon: '<i class="fas fa-handshake-angle"></i>',
+    title: 'Consulting & Registrations',
+    tagline: 'End-to-end business setup consulting with all statutory registrations under one roof.',
+    body: `
+      <div class="svc-blk">
+        <h4><i class="fas fa-info-circle"></i> Overview</h4>
+        <p>Complete business setup and consulting — from choosing the right structure to obtaining all necessary registrations and licenses. Whether you are a first-time entrepreneur or an established business expanding operations, we simplify the regulatory maze so you can focus on growing your business.</p>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-list-check"></i> Services Included</h4>
+        <div class="svc-pts">
+          <div class="svc-pt"><i class="fas fa-check"></i> Business structure advisory</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> MSME / Udyam Registration</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> FSSAI (Food License) Registration</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Trade License / Shop Act (Maharashtra)</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Import Export Code (IEC) Registration</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Professional Tax (PT) Registration & Returns</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> PF & ESI Registration & Monthly Compliance</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> TAN Registration & TDS Return filing</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Trademark Registration advisory</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Digital Signature Certificate (DSC)</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Back-office & outsourced accounting support</div>
+          <div class="svc-pt"><i class="fas fa-check"></i> Startup India & DPIIT recognition filing</div>
+        </div>
+      </div>`
+  }
+};
+
+// ── SERVICE: OPEN DETAIL PAGE OR MODAL ──
+// ITR opens a full detail page; others open modal
+const SVC_PAGE = ['itr']; // Add more IDs here to give them full pages too
+
+function openSvc(id) {
+  openSvcModal(id);
+}
+
+// ── FULL PAGE ──
+const SVC_PAGE_DATA = {
+  itr: {
+    icon: '<i class="fas fa-file-invoice-dollar"></i>',
+    title: 'Income Tax Filing',
+    tagline: 'End-to-end ITR filing, tax planning & compliance for individuals, HUFs, firms and corporates — updated for FY 2025-26 (AY 2026-27).',
+    content: `
+      <div class="svc-content-card">
+        <div class="svc-content-card-head"><i class="fas fa-info-circle"></i><h3>Overview</h3></div>
+        <div class="svc-content-card-body">
+          <p>PSV Jain & Associates provides comprehensive Income Tax services for all categories of taxpayers — salaried employees, self-employed professionals, business owners, HUFs, partnership firms, LLPs, and corporates. Our team stays updated with every amendment under the Income Tax Act, 1961, Union Budget changes, and CBDT notifications to ensure you are always compliant and never overpay.</p>
+          <p>For FY 2025-26 (AY 2026-27), the New Tax Regime is the default regime. We help you analyse both regimes and choose the one that minimises your tax outflow based on your income profile, investments, and deductions.</p>
+        </div>
+      </div>
+
+      <div class="svc-content-card">
+        <div class="svc-content-card-head"><i class="fas fa-list-check"></i><h3>Services Included</h3></div>
+        <div class="svc-content-card-body">
+          <div class="svc-page-pts">
+            <div class="svc-page-pt"><i class="fas fa-check-circle"></i> ITR-1 to ITR-7 – All categories of taxpayers</div>
+            <div class="svc-page-pt"><i class="fas fa-check-circle"></i> New vs Old Tax Regime analysis & optimisation</div>
+            <div class="svc-page-pt"><i class="fas fa-check-circle"></i> Capital Gains – STCG & LTCG (Equity, Property, MF)</div>
+            <div class="svc-page-pt"><i class="fas fa-check-circle"></i> House Property & Rental Income computation</div>
+            <div class="svc-page-pt"><i class="fas fa-check-circle"></i> Business / Professional Income u/s 44AD, 44ADA, 44AE</div>
+            <div class="svc-page-pt"><i class="fas fa-check-circle"></i> Salary income with perquisites & exempt allowances</div>
+            <div class="svc-page-pt"><i class="fas fa-check-circle"></i> Foreign Income, DTAA relief & FEMA compliance</div>
+            <div class="svc-page-pt"><i class="fas fa-check-circle"></i> Advance Tax computation & challan payment support</div>
+            <div class="svc-page-pt"><i class="fas fa-check-circle"></i> TDS reconciliation with Form 26AS & AIS / TIS</div>
+            <div class="svc-page-pt"><i class="fas fa-check-circle"></i> Deductions u/s 80C, 80D, 80G, 80E, 80EEA, 80TTA</div>
+            <div class="svc-page-pt"><i class="fas fa-check-circle"></i> Updated ITR (ITR-U) filing for past 2 years</div>
+            <div class="svc-page-pt"><i class="fas fa-check-circle"></i> Income Tax Notice drafting, reply & representation</div>
+            <div class="svc-page-pt"><i class="fas fa-check-circle"></i> Refund follow-up & status tracking</div>
+            <div class="svc-page-pt"><i class="fas fa-check-circle"></i> Rectification requests u/s 154</div>
+            <div class="svc-page-pt"><i class="fas fa-check-circle"></i> Assessment & Scrutiny support (u/s 143(2), 147)</div>
+            <div class="svc-page-pt"><i class="fas fa-check-circle"></i> Tax planning for HNIs, NRIs & senior citizens</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-content-card">
+        <div class="svc-content-card-head"><i class="fas fa-calendar-alt"></i><h3>Key Due Dates — FY 2025-26 (AY 2026-27)</h3></div>
+        <div class="svc-content-card-body" style="padding:0;">
+          <table class="svc-due-table">
+            <thead><tr><th>Due Date</th><th>Compliance</th><th>Applicable To</th><th>Category</th></tr></thead>
+            <tbody>
+              <tr><td class="due-date-cell">15 Jun 2025</td><td>Advance Tax – 1st instalment (15%)</td><td>All Taxpayers with tax liability &gt; ₹10,000</td><td><span class="due-type due-type-tax">Advance Tax</span></td></tr>
+              <tr><td class="due-date-cell">15 Sep 2025</td><td>Advance Tax – 2nd instalment (45%)</td><td>All Taxpayers</td><td><span class="due-type due-type-tax">Advance Tax</span></td></tr>
+              <tr><td class="due-date-cell">15 Dec 2025</td><td>Advance Tax – 3rd instalment (75%)</td><td>All Taxpayers</td><td><span class="due-type due-type-tax">Advance Tax</span></td></tr>
+              <tr><td class="due-date-cell">15 Mar 2026</td><td>Advance Tax – 4th instalment (100%)</td><td>All Taxpayers</td><td><span class="due-type due-type-tax">Advance Tax</span></td></tr>
+              <tr><td class="due-date-cell">31 Jul 2026</td><td>ITR filing – Non-Audit cases</td><td>Individuals, HUFs, Firms (no audit)</td><td><span class="due-type due-type-tax">ITR Filing</span></td></tr>
+              <tr><td class="due-date-cell">30 Sep 2026</td><td>Tax Audit Report – Form 3CA / 3CB / 3CD</td><td>Businesses &amp; professionals requiring audit</td><td><span class="due-type due-type-roc">Audit</span></td></tr>
+              <tr><td class="due-date-cell">31 Oct 2026</td><td>ITR filing – Audit cases</td><td>Companies, LLPs, audit-required entities</td><td><span class="due-type due-type-tax">ITR Filing</span></td></tr>
+              <tr><td class="due-date-cell">30 Nov 2026</td><td>ITR filing – Transfer Pricing cases</td><td>International transaction entities</td><td><span class="due-type due-type-tax">ITR Filing</span></td></tr>
+              <tr><td class="due-date-cell">31 Dec 2026</td><td>Belated / Revised ITR u/s 139(4) & 139(5)</td><td>All taxpayers who missed original deadline</td><td><span class="due-type due-type-tax">Revised ITR</span></td></tr>
+              <tr><td class="due-date-cell">31 Mar 2028</td><td>Updated ITR (ITR-U) for AY 2026-27</td><td>All taxpayers (with 25%/50% additional tax)</td><td><span class="due-type due-type-tax">ITR-U</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="svc-content-card">
+        <div class="svc-content-card-head"><i class="fas fa-scale-balanced"></i><h3>New vs Old Tax Regime — FY 2025-26</h3></div>
+        <div class="svc-content-card-body">
+          <p>The New Tax Regime is the <strong>default regime</strong> from FY 2023-24 onwards. You must opt out explicitly if you prefer the Old Regime. Here's a quick comparison for FY 2025-26:</p>
+          <table class="svc-due-table" style="margin-top:10px;">
+            <thead><tr><th>Income Slab</th><th>New Regime Tax Rate</th><th>Old Regime Tax Rate</th></tr></thead>
+            <tbody>
+              <tr><td>Up to ₹3,00,000</td><td>NIL</td><td>NIL</td></tr>
+              <tr><td>₹3,00,001 – ₹7,00,000</td><td>5%</td><td>5% (up to ₹5L)</td></tr>
+              <tr><td>₹7,00,001 – ₹10,00,000</td><td>10%</td><td>20%</td></tr>
+              <tr><td>₹10,00,001 – ₹12,00,000</td><td>15%</td><td>30%</td></tr>
+              <tr><td>₹12,00,001 – ₹15,00,000</td><td>20%</td><td>30%</td></tr>
+              <tr><td>Above ₹15,00,000</td><td>30%</td><td>30%</td></tr>
+            </tbody>
+          </table>
+          <p style="margin-top:12px; font-size:12px; color:var(--text-light);"><i class="fas fa-info-circle" style="color:var(--gold);"></i> &nbsp;Under the New Regime, a rebate u/s 87A makes income up to ₹7,00,000 effectively tax-free. The basic exemption is ₹4,00,000 for FY 2025-26 (Budget 2025 update).</p>
+        </div>
+      </div>
+    `,
+    faqs: [
+      { q: 'Which ITR form should I file?', a: 'ITR-1 (Sahaj) for salaried individuals with income up to ₹50L. ITR-2 for capital gains or more than one house property. ITR-3 for business/professional income. ITR-4 for presumptive income u/s 44AD/44ADA. Companies file ITR-6. We help you identify the correct form.' },
+      { q: 'Is the New Tax Regime better for me?', a: 'It depends on your deductions. If you have significant 80C investments, home loan, HRA, and NPS contributions, the Old Regime may save more tax. We do a detailed calculation for every client before choosing.' },
+      { q: 'What documents do I need for ITR filing?', a: 'Form 16 / 16A (TDS certificates), bank statements, investment proofs (80C, 80D), capital gains statement from broker, rental agreement (if applicable), and Aadhaar / PAN details.' },
+      { q: 'Can I file ITR after the due date?', a: 'Yes — a belated return u/s 139(4) can be filed up to 31 December of the assessment year with a late fee of ₹1,000 to ₹5,000 u/s 234F. After that, you can file an Updated ITR (ITR-U) within 2 years with additional tax.' },
+      { q: 'How long does it take to get an IT refund?', a: 'After e-verification of your ITR, refunds are usually processed within 20–45 days for straightforward cases. We track your refund status and follow up if there are delays.' }
+    ],
+    others: [
+      { id: 'gst', icon: 'fas fa-receipt', label: 'GST Registration & Filing' },
+      { id: 'audit', icon: 'fas fa-magnifying-glass-chart', label: 'Audit & Assurance' },
+      { id: 'company', icon: 'fas fa-building', label: 'Company Registration' },
+      { id: 'accounting', icon: 'fas fa-book-open', label: 'Accounting & Bookkeeping' },
+      { id: 'roc', icon: 'fas fa-clipboard-check', label: 'ROC / Business Compliance' },
+      { id: 'advisory', icon: 'fas fa-chart-pie', label: 'Financial Advisory' },
+      { id: 'certification', icon: 'fas fa-certificate', label: 'Certification Services' },
+    ]
+  }
+};
+
+function openSvcPage(id) {
+  const d = SVC_PAGE_DATA[id];
+  if (!d) { openSvcModal(id); return; }
+
+  // Build FAQs
+  const faqsHtml = d.faqs.map(f => `
+    <div class="svc-faq-item" onclick="toggleFaq(this)">
+      <div class="svc-faq-q">${f.q}<i class="fas fa-chevron-down"></i></div>
+      <div class="svc-faq-a">${f.a}</div>
+    </div>`).join('');
+
+  // Build other services list
+  const othersHtml = d.others.map(o => `
+    <div class="svc-other-link" onclick="openSvc('${o.id}')">
+      <i class="${o.icon} icon"></i>${o.label}<i class="fas fa-chevron-right arr"></i>
+    </div>`).join('');
+
+  // Set breadcrumb
+  document.getElementById('svcPageBreadcrumb').textContent = d.title;
+
+  // Build full page
+  document.getElementById('svcDetailContent').innerHTML = `
+    <div class="svc-page-header">
+      <div class="svc-page-header-icon">${d.icon}</div>
+      <div style="flex:1;">
+        <h1>${d.title}</h1>
+        <p>${d.tagline}</p>
+        <div class="svc-page-header-actions">
+          <a href="#" onclick="closeSvcPage(); openQuery(); return false;" class="svc-page-cta"><i class="fas fa-paper-plane"></i> Send Enquiry</a>
+          <button onclick="closeSvcPage()" class="svc-page-cta-outline"><i class="fas fa-arrow-left"></i> Back to Services</button>
+        </div>
+      </div>
+    </div>
+    <div class="svc-page-body">
+      <div class="svc-page-main">${d.content}</div>
+      <div class="svc-page-sidebar">
+        <div class="svc-sidebar-card">
+          <div class="svc-sidebar-head"><i class="fas fa-circle-question"></i><h4>Frequently Asked Questions</h4></div>
+          <div class="svc-sidebar-body">${faqsHtml}</div>
+        </div>
+        <div class="svc-sidebar-card">
+          <div class="svc-sidebar-head"><i class="fas fa-th-list"></i><h4>Other Services</h4></div>
+          <div class="svc-sidebar-body"><div class="svc-other-services">${othersHtml}</div></div>
+        </div>
+        <div class="svc-sidebar-card">
+          <div class="svc-sidebar-head"><i class="fas fa-paper-plane"></i><h4>Get a Free Consultation</h4></div>
+          <div class="svc-sidebar-body" style="text-align:center; padding:18px 14px;">
+            <div style="font-size:30px; color:var(--navy); margin-bottom:8px;"><i class="fas fa-user-tie"></i></div>
+            <p style="font-size:12.5px; color:var(--text-mid); margin-bottom:14px; line-height:1.6;">Talk to our CA experts about your tax filing. Quick, accurate, and confidential.</p>
+            <a href="#" onclick="closeSvcPage(); openQuery(); return false;" class="btn-gold" style="display:flex;justify-content:center;font-size:13px;padding:10px;"><i class="fas fa-paper-plane"></i>&nbsp; Send Your Query</a>
+            <div style="margin-top:10px; font-size:12px; color:var(--text-light);"><i class="fas fa-envelope" style="color:var(--gold);"></i> psvjain.office@gmail.com</div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+
+  // Show detail page, hide main content
+  document.getElementById('svcDetailPage').style.display = 'block';
+  document.querySelector('.main-wrap').style.display = 'none';
+
+  // Scroll to top of detail page
+  document.getElementById('svcDetailPage').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function closeSvcPage() {
+  document.getElementById('svcDetailPage').style.display = 'none';
+  document.querySelector('.main-wrap').style.display = '';
+  document.getElementById('services-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function toggleFaq(el) {
+  el.classList.toggle('open');
+}
+
+// ── MODAL (for other services) ──
+function openSvcModal(id) {
+  const d = SVC_DATA[id];
+  if (!d) return;
+
+  document.getElementById('svcModalIcon').innerHTML = d.icon;
+  document.getElementById('svcModalTitle').textContent = d.title;
+  document.getElementById('svcModalTagline').textContent = d.tagline;
+  document.getElementById('svcModalBody').innerHTML = d.body;
+  document.getElementById('svcModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeSvc() {
+  document.getElementById('svcModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeSvcOutside(e) {
+  if (e.target === document.getElementById('svcModal')) closeSvc();
+}
+</script>
+<!-- ══ ABOUT US MODAL ══ -->
+<div class="svc-modal-overlay" id="aboutModal" onclick="if(event.target===this) closeAbout()">
+  <div class="svc-modal-box" style="max-width:680px;">
+    <div class="svc-modal-header">
+      <div class="svc-modal-icon"><i class="fas fa-building-columns"></i></div>
+      <div>
+        <h2>About PSV Jain & Associates</h2>
+        <p>Chartered Accountants — Borivali East, Mumbai</p>
+      </div>
+      <button class="svc-modal-close" onclick="closeAbout()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="svc-modal-body">
+      <div class="svc-blk">
+        <h4><i class="fas fa-info-circle"></i> Who We Are</h4>
+        <p><strong>PSV Jain & Associates</strong> is a reputed Chartered Accountant firm established in Mumbai, offering a full spectrum of financial, taxation, audit, and compliance services. Our firm is registered with the Institute of Chartered Accountants of India (ICAI) and proudly serves 500+ clients across Mumbai, Maharashtra, and India.</p>
+        <p>We are headquartered at <strong>105, Yashwant Shopping Centre, Kasturba Road No. 7, Chinchpada, Borivali East, Mumbai – 400066</strong> — conveniently accessible to businesses and individuals across the western suburbs of Mumbai.</p>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-bullseye"></i> Our Mission</h4>
+        <p>To provide accurate, timely, and personalized financial services that empower our clients to make informed decisions, achieve compliance, and grow their businesses with confidence.</p>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-list-check"></i> What We Offer</h4>
+        <div class="svc-pts">
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> Income Tax Filing & Planning</div>
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> GST Registration & Returns</div>
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> Audit & Assurance Services</div>
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> Company & LLP Registration</div>
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> Accounting & Bookkeeping</div>
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> ROC / MCA Compliance</div>
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> Financial Advisory & Planning</div>
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> CA Certification Services</div>
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> MSME, FSSAI & Trade Licenses</div>
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> NRI & FEMA Advisory</div>
+        </div>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-star"></i> Why Clients Trust Us</h4>
+        <div class="svc-pts">
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> 10+ years of professional experience</div>
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> 500+ satisfied clients across India</div>
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> ★★★★★ 5.0 rating on Google Reviews</div>
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> ICAI registered & certified professionals</div>
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> 100% accurate & on-time filings</div>
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> Strict data confidentiality standards</div>
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> Personalised attention to every client</div>
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> 24-hour online support available</div>
+        </div>
+      </div>
+    </div>
+    <div class="svc-modal-footer">
+      <a href="#" onclick="closeAbout(); openQuery(); return false;" class="btn-gold"><i class="fas fa-paper-plane"></i> &nbsp;Book a Free Consultation</a>
+      <button onclick="closeAbout()" class="svc-modal-close-btn">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function openAbout() {
+  document.getElementById('aboutModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeAbout() {
+  document.getElementById('aboutModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+<!-- ══ CAREERS MODAL ══ -->
+<div class="svc-modal-overlay" id="careersModal" onclick="if(event.target===this) closeCareers()">
+  <div class="svc-modal-box" style="max-width:780px;">
+    <div class="svc-modal-header">
+      <div class="svc-modal-icon"><i class="fas fa-user-tie"></i></div>
+      <div>
+        <h2>Careers at PSV Jain & Associates</h2>
+        <p>Join our growing team of CA professionals in Mumbai</p>
+      </div>
+      <button class="svc-modal-close" onclick="closeCareers()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="svc-modal-body" style="padding:0;">
+
+      <!-- Apply Here heading -->
+      <div style="text-align:center; padding:28px 24px 10px;">
+        <h3 style="font-family:'Playfair Display',serif; font-size:26px; font-weight:700; color:var(--text-dark); margin-bottom:10px;">-Apply Here-</h3>
+        <p style="font-size:13px; color:var(--text-mid); line-height:1.7; max-width:580px; margin:0 auto;">We nurture and cultivate a sense of pride in the work and create team leaders. Your growth chart will be governed by well-defined transparent policies of the firm. Apply via the form given below and meet us for a face to face interview.</p>
+      </div>
+
+      <!-- Form -->
+      <div style="padding:16px 28px 24px;" id="careerFormWrap">
+        <div class="career-form-grid">
+
+          <div class="cf-field">
+            <label class="cf-label">First Name <span class="cf-req">*</span></label>
+            <input type="text" class="cf-input" id="cf_fname" placeholder="">
+          </div>
+          <div class="cf-field">
+            <label class="cf-label">Last Name <span class="cf-req">*</span></label>
+            <input type="text" class="cf-input" id="cf_lname" placeholder="">
+          </div>
+
+          <div class="cf-field">
+            <label class="cf-label">Email <span class="cf-req">*</span></label>
+            <input type="email" class="cf-input" id="cf_email" placeholder="">
+          </div>
+          <div class="cf-field">
+            <label class="cf-label">Mobile No <span class="cf-req">*</span></label>
+            <input type="tel" class="cf-input" id="cf_mobile" placeholder="">
+          </div>
+
+          <div class="cf-field">
+            <label class="cf-label">Gender <span class="cf-req">*</span></label>
+            <select class="cf-input cf-select" id="cf_gender">
+              <option value="">Select..</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="cf-field">
+            <label class="cf-label">Position you are applying for</label>
+            <input type="text" class="cf-input" id="cf_position" placeholder="">
+          </div>
+
+          <div class="cf-field">
+            <label class="cf-label">Date of Birth (DD/MM/YYYY) <span class="cf-req">*</span></label>
+            <input type="text" class="cf-input" id="cf_dob" placeholder="DD/MM/YYYY">
+          </div>
+          <div class="cf-field">
+            <label class="cf-label">Highest Qualification</label>
+            <input type="text" class="cf-input" id="cf_qualification" placeholder="">
+          </div>
+
+          <div class="cf-field">
+            <label class="cf-label">Portfolio Website</label>
+            <input type="text" class="cf-input" id="cf_portfolio" placeholder="http://">
+          </div>
+          <div class="cf-field">
+            <label class="cf-label">Upload Resume <span class="cf-req">*</span> (Max size 1 mb)</label>
+            <input type="file" class="cf-input cf-file" id="cf_resume" accept=".pdf,.doc,.docx">
+          </div>
+
+          <div class="cf-field">
+            <label class="cf-label">Last Company you worked for</label>
+            <input type="text" class="cf-input" id="cf_lastco" placeholder="">
+          </div>
+          <div class="cf-field">
+            <label class="cf-label">Years of Experience</label>
+            <div style="display:flex; gap:8px;">
+              <select class="cf-input cf-select" id="cf_exp_yr" style="flex:1;">
+                <option value="">Select Year</option>
+                <option>Fresher</option>
+                <option>1</option><option>2</option><option>3</option>
+                <option>4</option><option>5</option><option>6</option>
+                <option>7</option><option>8</option><option>9</option>
+                <option>10+</option>
+              </select>
+              <select class="cf-input cf-select" id="cf_exp_mo" style="flex:1;">
+                <option value="">Select Month</option>
+                <option>0</option><option>1</option><option>2</option>
+                <option>3</option><option>4</option><option>5</option>
+                <option>6</option><option>7</option><option>8</option>
+                <option>9</option><option>10</option><option>11</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="cf-field cf-full">
+            <label class="cf-label">Reference / Comments / Questions</label>
+            <textarea class="cf-input cf-textarea" id="cf_comments" rows="4" placeholder=""></textarea>
+          </div>
+
+        </div>
+
+        <div style="text-align:center; margin-top:20px;">
+          <button class="cf-submit-btn" id="cfSubmitBtn" onclick="submitCareers()">
+            Send Application
+          </button>
+        </div>
+      </div>
+
+      <!-- Success message (hidden by default) -->
+      <div id="careerSuccess" style="display:none; text-align:center; padding:40px 24px;">
+        <div style="font-size:48px; color:var(--gold); margin-bottom:12px;"><i class="fas fa-check-circle"></i></div>
+        <h3 style="font-family:'Playfair Display',serif; font-size:20px; color:var(--navy); margin-bottom:8px;">Application Submitted!</h3>
+        <p style="font-size:13px; color:var(--text-mid);">Thank you for applying. We will review your application and get back to you within 3–5 working days.</p>
+        <button onclick="closeCareers()" class="btn-gold" style="margin-top:18px; border:none; cursor:pointer;">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+.career-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 20px;
+}
+.cf-full { grid-column: 1 / -1; }
+.cf-field { display: flex; flex-direction: column; gap: 5px; }
+.cf-label { font-size: 12.5px; font-weight: 600; color: var(--text-dark); }
+.cf-req { color: #e53e3e; }
+.cf-input {
+  padding: 8px 11px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 13px;
+  font-family: 'Source Sans 3', sans-serif;
+  color: var(--text-dark);
+  background: #fff;
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+.cf-input:focus { outline: none; border-color: var(--navy); }
+.cf-select { cursor: pointer; }
+.cf-textarea { resize: vertical; min-height: 90px; }
+.cf-file { padding: 6px 8px; cursor: pointer; }
+.cf-submit-btn {
+  padding: 11px 40px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 14px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.cf-submit-btn:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
+@media (max-width: 600px) {
+  .career-form-grid { grid-template-columns: 1fr; }
+  .cf-full { grid-column: 1; }
+}
+</style>
+
+
+<!-- ══ CONTACT US MODAL ══ -->
+<div class="svc-modal-overlay" id="contactModal" onclick="if(event.target===this) closeContact()">
+  <div class="svc-modal-box" style="max-width:580px;">
+    <div class="svc-modal-header">
+      <div class="svc-modal-icon"><i class="fas fa-phone-volume"></i></div>
+      <div>
+        <h2>Contact Us</h2>
+        <p>Get in touch with PSV Jain & Associates</p>
+      </div>
+      <button class="svc-modal-close" onclick="closeContact()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="svc-modal-body">
+      <div class="svc-blk">
+        <h4><i class="fas fa-map-marker-alt"></i> Office Address</h4>
+        <p>105, Yashwant Shopping Centre, Kasturba Road No. 7,<br>Chinchpada, Borivali East, Mumbai – 400066<br>Maharashtra, India</p>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-envelope"></i> Email</h4>
+        <p><a href="/cdn-cgi/l/email-protection#a6d6d5d0ccc7cfc888c9c0c0cfc5c3e6c1cbc7cfca88c5c9cb" style="color:var(--gold); font-weight:600;"><span class="__cf_email__" data-cfemail="91e1e2e7fbf0f8ffbffef7f7f8f2f4d1f6fcf0f8fdbff2fefc">[email&#160;protected]</span></a></p>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-star"></i> Google Rating</h4>
+        <p style="color:var(--gold); font-size:16px; font-weight:700;">★★★★★ <span style="color:var(--navy);">5.0 — Based on Google Reviews</span></p>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-clock"></i> Office Hours</h4>
+        <div class="svc-pts">
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> Monday – Saturday: 10:00 AM – 7:00 PM</div>
+          <div class="svc-pt"><i class="fas fa-check-circle"></i> Sunday: By Appointment Only</div>
+        </div>
+      </div>
+      <div class="svc-blk" style="padding-bottom:0; border-bottom:none;">
+        <h4><i class="fas fa-map"></i> Location Map</h4>
+        <div style="border-radius:4px; overflow:hidden; border:1px solid var(--border); margin-top:6px;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.0!2d72.8562!3d19.2183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDEzJzA2LjAiTiA3MsKwNTEnMjIuMyJF!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="200" style="border:0; display:block;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="svc-modal-footer">
+      <a href="#" onclick="closeContact(); openQuery(); return false;" class="btn-gold"><i class="fas fa-paper-plane"></i> &nbsp;Send a Query</a>
+      <a href="/cdn-cgi/l/email-protection#79090a0f1318101757161f1f101a1c391e14181015571a1614" class="svc-modal-close-btn" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px;"><i class="fas fa-envelope"></i> Email Us</a>
+      <button onclick="closeContact()" class="svc-modal-close-btn">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function openCareers() {
+  document.getElementById('careersModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  // Reset form each time
+  document.getElementById('careerFormWrap').style.display = '';
+  document.getElementById('careerSuccess').style.display = 'none';
+}
+function closeCareers() {
+  document.getElementById('careersModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function submitCareers() {
+  var fname = document.getElementById('cf_fname').value.trim();
+  var lname = document.getElementById('cf_lname').value.trim();
+  var email = document.getElementById('cf_email').value.trim();
+  var mobile = document.getElementById('cf_mobile').value.trim();
+  var gender = document.getElementById('cf_gender').value;
+  var dob = document.getElementById('cf_dob').value.trim();
+  var resume = document.getElementById('cf_resume').value;
+  if (!fname || !lname || !email || !mobile || !gender || !dob || !resume) {
+    alert('Please fill all required fields marked with *');
+    return;
+  }
+  document.getElementById('careerFormWrap').style.display = 'none';
+  document.getElementById('careerSuccess').style.display = 'block';
+}
+function openContact() {
+  document.getElementById('contactModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeContact() {
+  document.getElementById('contactModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+<!-- ══ FREE CONSULTATION MODAL ══ -->
+<div class="modal-overlay" id="freeConsultModal" onclick="if(event.target===this) closeFreeConsult()">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3><i class="fas fa-calendar-check" style="color:var(--gold); margin-right:8px"></i>Free Consultation</h3>
+      <button class="modal-close" onclick="closeFreeConsult()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="form-row-2">
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" id="fc_name" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label>Phone Number *</label>
+          <input type="tel" id="fc_phone" placeholder="+91 XXXXX XXXXX">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="fc_email" placeholder="your@email.com">
+      </div>
+      <div class="form-group">
+        <label>Service Required</label>
+        <select id="fc_service">
+          <option value="">Select a service...</option>
+          <option>Income Tax Filing (ITR)</option>
+          <option>GST Registration & Filing</option>
+          <option>Company Registration</option>
+          <option>Accounting & Bookkeeping</option>
+          <option>Audit & Assurance</option>
+          <option>ROC / Business Compliance</option>
+          <option>Financial Advisory</option>
+          <option>Certification Services</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Brief Description</label>
+        <textarea id="fc_msg" placeholder="Tell us about your requirements..." rows="3"></textarea>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-gold" style="border:none; cursor:pointer;" onclick="submitFreeConsult()">
+        <i class="fas fa-calendar-check"></i> Book Free Consultation
+      </button>
+      <button class="btn-outline" onclick="closeFreeConsult()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function openFreeConsult() {
+  document.getElementById('freeConsultModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeFreeConsult() {
+  document.getElementById('freeConsultModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function submitFreeConsult() {
+  var name = document.getElementById('fc_name').value.trim();
+  var phone = document.getElementById('fc_phone').value.trim();
+  if (!name || !phone) {
+    alert('Please enter your name and phone number.');
+    return;
+  }
+  document.querySelector('#freeConsultModal .modal-body').innerHTML =
+    '<div style="text-align:center; padding:30px 10px;">' +
+    '<div style="font-size:44px; color:var(--gold); margin-bottom:12px;"><i class="fas fa-check-circle"></i></div>' +
+    '<h4 style="font-family:Playfair Display,serif; color:var(--navy); margin-bottom:8px;">Consultation Booked!</h4>' +
+    '<p style="font-size:13px; color:var(--text-mid);">Thank you, <strong>' + name + '</strong>! We will call you at <strong>' + phone + '</strong> shortly to schedule your free consultation.</p>' +
+    '</div>';
+  document.querySelector('#freeConsultModal .modal-footer').style.display = 'none';
+}
+</script>
+</body>
+</html>
