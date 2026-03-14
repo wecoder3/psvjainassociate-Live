@@ -500,7 +500,7 @@ img { max-width: 100%; }
   display: inline-flex;
   white-space: nowrap;
   animation: ticker 45s linear infinite;
-  gap: 60px;
+  gap: 20px;
   align-items: center;
 }
 .ticker-inner:hover { animation-play-state: paused; }
@@ -1709,8 +1709,14 @@ footer {
   .hero { height: 300px; }
   .stats-band-inner { grid-template-columns: repeat(2, 1fr); }
   .header-right { display: none; }
-  .topbar-left { flex-direction: column; gap: 4px; }
+  .topbar-left { flex-direction: column; gap: 4px; align-items: flex-start; }
+  .topbar-left a { font-size: 11px; }
+  .topbar-inner { align-items: flex-start; }
   .services-grid { grid-template-columns: 1fr; }
+  .ticker-label { font-size: 9px; padding: 6px 8px; letter-spacing: 0.5px; }
+  .ticker-label i { font-size: 10px; }
+  .ticker-item { font-size: 11px; }
+  .ticker-item .date-badge { font-size: 9px; padding: 1px 5px; }
 }
 </style>
 </head>
@@ -1956,12 +1962,12 @@ footer {
               With a team of qualified Chartered Accountants, we ensure every filing is precise, every compliance is met on time, and every client receives dedicated professional attention.
             </p>
             <div style="margin-top:14px">
-              <a href="#" onclick="openQuery(); return false;" class="btn-gold" style="font-size:12.5px; padding:9px 20px;">
+              <a href="#" onclick="openFreeConsult(); return false;" class="btn-gold" style="font-size:12.5px; padding:9px 20px;">
                 <i class="fas fa-calendar-check"></i> Book a Free Consultation
               </a>
               &nbsp;
               <a href="#" onclick="openAbout(); return false;" style="font-size:12.5px; color:var(--navy); font-weight:600; text-decoration:underline; text-underline-offset:3px;">
-                Read More â†’
+                Read More &rarr;
               </a>
             </div>
           </div>
@@ -2165,17 +2171,17 @@ footer {
       </div>
       <div class="sidebar-body" style="padding:0;">
         <div class="news-list" id="newsList" style="padding:0 14px;">
-          <div class="news-item"><span class="news-date">07 Mar 26</span><div class="news-text"><a href="#">India's CAD widens to $13.2 billion in Q3 on higher trade deficit: RBI</a></div></div>
-          <div class="news-item"><span class="news-date">06 Mar 26</span><div class="news-text"><a href="#">SEBI revamps mutual fund categories &mdash; key changes for investors</a></div></div>
-          <div class="news-item"><span class="news-date">02 Mar 26</span><div class="news-text"><a href="#">GST collection rises 8.1% to &#8377;1.83 lakh crore in February 2026</a></div></div>
-          <div class="news-item"><span class="news-date">01 Mar 26</span><div class="news-text"><a href="#">CBDT notifies ITR forms for AY 2026-27 &mdash; key changes explained</a></div></div>
-          <div class="news-item"><span class="news-date">07 Feb 26</span><div class="news-text"><a href="#">RBI cuts repo rate by 25 bps to 6.25% &mdash; first cut in 5 years</a></div></div>
-          <div class="news-item"><span class="news-date">01 Feb 26</span><div class="news-text"><a href="#">Union Budget 2026 &mdash; No income tax up to &#8377;12 lakh under New Regime</a></div></div>
-          <div class="news-item"><span class="news-date">01 Feb 26</span><div class="news-text"><a href="#">Budget 2026: TDS & TCS thresholds revised &mdash; full list of changes</a></div></div>
-          <div class="news-item"><span class="news-date">15 Jan 26</span><div class="news-text"><a href="#">MCA mandates additional disclosures in Board's Report for FY 2025-26</a></div></div>
+          <div class="news-item"><span class="news-date">07 Mar 26</span><div class="news-text"><a href="#" onclick="openNews(1); return false;">India's CAD widens to $13.2 billion in Q3 on higher trade deficit: RBI</a></div></div>
+          <div class="news-item"><span class="news-date">06 Mar 26</span><div class="news-text"><a href="#" onclick="openNews(2); return false;">SEBI revamps mutual fund categories &mdash; key changes for investors</a></div></div>
+          <div class="news-item"><span class="news-date">02 Mar 26</span><div class="news-text"><a href="#" onclick="openNews(3); return false;">GST collection rises 8.1% to &#8377;1.83 lakh crore in February 2026</a></div></div>
+          <div class="news-item"><span class="news-date">01 Mar 26</span><div class="news-text"><a href="#" onclick="openNews(4); return false;">CBDT notifies ITR forms for AY 2026-27 &mdash; key changes explained</a></div></div>
+          <div class="news-item"><span class="news-date">07 Feb 26</span><div class="news-text"><a href="#" onclick="openNews(5); return false;">RBI cuts repo rate by 25 bps to 6.25% &mdash; first cut in 5 years</a></div></div>
+          <div class="news-item"><span class="news-date">01 Feb 26</span><div class="news-text"><a href="#" onclick="openNews(6); return false;">Union Budget 2026 &mdash; No income tax up to &#8377;12 lakh under New Regime</a></div></div>
+          <div class="news-item"><span class="news-date">01 Feb 26</span><div class="news-text"><a href="#" onclick="openNews(7); return false;">Budget 2026: TDS &amp; TCS thresholds revised &mdash; full list of changes</a></div></div>
+          <div class="news-item"><span class="news-date">15 Jan 26</span><div class="news-text"><a href="#" onclick="openNews(8); return false;">MCA mandates additional disclosures in Board's Report for FY 2025-26</a></div></div>
         </div>
         <div style="padding:8px 14px 12px;text-align:right;">
-          <a href="#" style="font-size:12px;color:var(--gold);font-weight:600;">View All News â†’</a>
+          <a href="#" onclick="openAllNews(); return false;" style="font-size:12px;color:var(--gold);font-weight:600;">View All News &rarr;</a>
         </div>
       </div>
     </div>
@@ -3444,10 +3450,544 @@ function closeContact() {
   </div>
 </div>
 
+<!-- â•â• ALL NEWS MODAL â•â• -->
+<div class="svc-modal-overlay" id="allNewsModal" onclick="if(event.target===this) closeAllNews()">
+  <div class="svc-modal-box" style="max-width:720px;">
+    <div class="svc-modal-header">
+      <div class="svc-modal-icon"><i class="fas fa-newspaper"></i></div>
+      <div>
+        <h2>What&#39;s New</h2>
+        <p>Latest updates in Tax, GST, Finance &amp; Business &mdash; March 2026</p>
+      </div>
+      <button class="svc-modal-close" onclick="closeAllNews()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="svc-modal-body" style="padding:20px; display:flex; flex-direction:column; gap:18px;">
+
+      <!-- NEWS 1 -->
+      <div class="news-card">
+        <div class="news-card-top">
+          <span class="news-card-tag rbi">RBI</span>
+          <span class="news-card-date"><i class="fas fa-calendar-alt"></i> 07 Mar 2026</span>
+        </div>
+        <h4 class="news-card-title">India&#39;s CAD widens to $13.2 billion in Q3 FY2025-26 on higher trade deficit</h4>
+        <p class="news-card-desc">India&#39;s Current Account Deficit (CAD) widened to <strong>$13.2 billion (1.5% of GDP)</strong> in Q3 FY2025-26, up from $10.4 billion in Q2. The primary driver was a sharp rise in the merchandise trade deficit to $78 billion, as imports grew faster than exports. Gold imports surged significantly during the quarter. However, the invisible account (services + remittances) provided a partial offset, with IT services exports remaining resilient at $30+ billion for the quarter.</p>
+        <div class="news-card-points">
+          <div class="ncp"><i class="fas fa-circle-dot"></i> Net services surplus stood at $41.5 billion, supporting the balance of payments</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> Private transfer receipts (remittances) remained strong at $29 billion</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> FPI inflows turned positive in late Q3, providing forex buffer</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> RBI&#39;s forex reserves stood at $636 billion, providing 10+ months of import cover</div>
+        </div>
+        <div class="news-card-impact"><i class="fas fa-lightbulb"></i> <strong>CA Relevance:</strong> Importers and exporters must review their FEMA compliance, Form 15CA/15CB requirements, and hedging strategies. Companies with ECB (External Commercial Borrowings) should track RBI guidelines on rollover.</div>
+      </div>
+
+      <!-- NEWS 2 -->
+      <div class="news-card">
+        <div class="news-card-top">
+          <span class="news-card-tag sebi">SEBI</span>
+          <span class="news-card-date"><i class="fas fa-calendar-alt"></i> 06 Mar 2026</span>
+        </div>
+        <h4 class="news-card-title">SEBI revamps mutual fund categories &mdash; major restructuring for investors</h4>
+        <p class="news-card-desc">SEBI has overhauled the mutual fund categorisation framework for the first time since 2017. The new circular introduces <strong>stricter portfolio mandate definitions</strong>, 4 new thematic sub-categories (Digital India, ESG Enhanced, Manufacturing, and Infrastructure), and revised caps on sector concentration. All AMCs have been given 90 days to realign their schemes.</p>
+        <div class="news-card-points">
+          <div class="ncp"><i class="fas fa-circle-dot"></i> Large-cap definition tightened: top 100 companies by full market cap (previously free-float)</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> Flexi-cap funds must hold minimum 25% each in large, mid, and small-cap</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> New ESG Enhanced category requires third-party ESG scoring validation</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> Fund houses can now launch only 1 scheme per sub-category (stricter limit)</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> Switching between schemes due to reclassification will not be treated as redemption for taxation purposes (SEBI-CBDT coordination pending)</div>
+        </div>
+        <div class="news-card-impact"><i class="fas fa-lightbulb"></i> <strong>CA Relevance:</strong> HNI clients holding large MF portfolios should review fund mandates post-reclassification. Tax implications on forced switches need careful review. Advisors should update client portfolio reviews for Q4 FY2025-26.</div>
+      </div>
+
+      <!-- NEWS 3 -->
+      <div class="news-card">
+        <div class="news-card-top">
+          <span class="news-card-tag gst">GST</span>
+          <span class="news-card-date"><i class="fas fa-calendar-alt"></i> 02 Mar 2026</span>
+        </div>
+        <h4 class="news-card-title">GST collection rises 8.1% to &#8377;1.83 lakh crore in February 2026</h4>
+        <p class="news-card-desc">India&#39;s gross GST revenues reached <strong>&#8377;1,83,646 crore</strong> in February 2026, up 8.1% YoY. This is the 6th consecutive month above &#8377;1.75 lakh crore. CGST collected was &#8377;33,510 crore, SGST &#8377;41,202 crore, IGST &#8377;95,178 crore (including &#8377;43,514 crore on imports), and Cess &#8377;13,756 crore. Refunds of &#8377;19,615 crore were issued, leading to net revenue of &#8377;1,64,031 crore (up 9.3% YoY).</p>
+        <div class="news-card-points">
+          <div class="ncp"><i class="fas fa-circle-dot"></i> E-invoicing enforcement for businesses above &#8377;5 crore turnover contributing to better compliance</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> GSTR-2B auto-population accuracy improved after IMS (Invoice Management System) rollout</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> Higher imports led to increased IGST on imports by 12.3%</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> GST department increasing scrutiny of businesses with high ITC claims vs output tax</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> QRMP scheme taxpayers: PMT-06 challan due by 25th of every month</div>
+        </div>
+        <div class="news-card-impact"><i class="fas fa-lightbulb"></i> <strong>CA Relevance:</strong> Ensure GSTR-1 vs GSTR-3B reconciliation is up to date. Review ITC eligibility for any blocked credits. Watch for GST notices for FY 2022-23 as scrutiny period is active.</div>
+      </div>
+
+      <!-- NEWS 4 -->
+      <div class="news-card">
+        <div class="news-card-top">
+          <span class="news-card-tag it">Income Tax</span>
+          <span class="news-card-date"><i class="fas fa-calendar-alt"></i> 01 Mar 2026</span>
+        </div>
+        <h4 class="news-card-title">CBDT notifies all ITR forms for AY 2026-27 &mdash; key structural changes</h4>
+        <p class="news-card-desc">The Central Board of Direct Taxes (CBDT) has notified <strong>ITR-1 through ITR-7</strong> for Assessment Year 2026-27 (FY 2025-26) via Notification No. 18/2026. E-filing is expected to open from 1st April 2026. The forms incorporate all Budget 2026 amendments including new tax slabs, revised TDS schedules, and VDA reporting requirements.</p>
+        <div class="news-card-points">
+          <div class="ncp"><i class="fas fa-circle-dot"></i> <strong>ITR-1 &amp; ITR-4:</strong> New field for agricultural income above &#8377;5 lakh (for surcharge computation)</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> <strong>ITR-2:</strong> Mandatory Schedule VDA for crypto/virtual digital assets income; Schedule FA for foreign assets expanded</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> <strong>ITR-3:</strong> New Schedule 115BBH for VDA from business; presumptive income under 44ADA raised to &#8377;75 lakh</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> <strong>Schedule 112A:</strong> Revised for grandfathering of LTCG on listed securities &mdash; FMV as on 31 Jan 2018 mandatory</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> <strong>New Regime default:</strong> Taxpayers must actively opt for Old Regime in ITR; once switched to new, cannot go back for business income</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> <strong>ITR-U (Updated Return):</strong> Window for AY 2023-24 closes 31 Mar 2026 &mdash; file before deadline</div>
+        </div>
+        <div class="news-card-impact"><i class="fas fa-lightbulb"></i> <strong>CA Relevance:</strong> Start collecting client data for FY 2025-26 now. Crypto holders, foreign asset holders, and those with capital gains need early preparation. Verify Form 26AS, AIS, and TIS for each client before filing.</div>
+      </div>
+
+      <!-- NEWS 5 -->
+      <div class="news-card">
+        <div class="news-card-top">
+          <span class="news-card-tag rbi">RBI</span>
+          <span class="news-card-date"><i class="fas fa-calendar-alt"></i> 07 Feb 2026</span>
+        </div>
+        <h4 class="news-card-title">RBI cuts repo rate by 25 bps to 6.25% &mdash; first rate cut in nearly 5 years</h4>
+        <p class="news-card-desc">The RBI Monetary Policy Committee (MPC) unanimously voted to cut the repo rate by <strong>25 basis points to 6.25%</strong> in its February 2026 meeting &mdash; the first reduction since May 2020. The Standing Deposit Facility (SDF) rate now stands at 6.00% and the Marginal Standing Facility (MSF) rate at 6.50%. The MPC maintained an &#39;accommodative&#39; stance, signalling further cuts are possible if inflation remains below 4.5%.</p>
+        <div class="news-card-points">
+          <div class="ncp"><i class="fas fa-circle-dot"></i> Home loan rates expected to fall by 20-25 bps in 1-2 months for floating rate borrowers</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> Business loans (MCLR-linked) will see reduction in next quarterly reset cycle</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> FD rates likely to decline &mdash; lock in existing long-term FD rates before banks revise downward</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> Debt mutual funds (longer duration) may see NAV appreciation &mdash; favourable for investors</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> Working capital loans for MSMEs expected to become cheaper from Q1 FY2026-27</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> CRR kept unchanged at 4%; GDP growth forecast maintained at 6.8% for FY2025-26</div>
+        </div>
+        <div class="news-card-impact"><i class="fas fa-lightbulb"></i> <strong>CA Relevance:</strong> Review client loan portfolios for refinancing opportunities. For companies with fixed vs floating mix, reassess borrowing strategy. For HNI/HUF clients &mdash; review FD maturity schedule and reinvestment strategy.</div>
+      </div>
+
+      <!-- NEWS 6 -->
+      <div class="news-card">
+        <div class="news-card-top">
+          <span class="news-card-tag budget">Budget 2026</span>
+          <span class="news-card-date"><i class="fas fa-calendar-alt"></i> 01 Feb 2026</span>
+        </div>
+        <h4 class="news-card-title">Union Budget 2026 &mdash; Zero tax up to &#8377;12 lakh; revised slabs under New Tax Regime</h4>
+        <p class="news-card-desc">Finance Minister Nirmala Sitharaman presented the Union Budget 2026-27 on 1st February 2026. The most significant personal tax announcement was the <strong>nil tax on income up to &#8377;12 lakh</strong> under the New Tax Regime via enhanced Section 87A rebate of &#8377;60,000. For salaried individuals, effective zero-tax threshold is &#8377;12.75 lakh (including &#8377;75,000 standard deduction).</p>
+        <div class="news-card-points">
+          <div class="ncp"><i class="fas fa-circle-dot"></i> <strong>Revised New Regime slabs:</strong> 0% (up to &#8377;4L), 5% (&#8377;4-8L), 10% (&#8377;8-12L), 15% (&#8377;12-16L), 20% (&#8377;16-20L), 25% (&#8377;20-24L), 30% (above &#8377;24L)</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> Standard deduction for salaried employees: &#8377;75,000 (unchanged)</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> Section 87A rebate: &#8377;60,000 for income up to &#8377;12 lakh (New Regime only)</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> Old Regime slabs and deductions (80C, 80D, HRA) remain unchanged</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> NPS employer contribution deduction raised to 14% of basic (from 10%) for private sector</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> ULIP maturity proceeds: if annual premium exceeds &#8377;5 lakh, taxable at 12.5% LTCG rate</div>
+        </div>
+        <div class="news-card-impact"><i class="fas fa-lightbulb"></i> <strong>CA Relevance:</strong> All salaried clients should be advised to compare Old vs New regime for FY 2025-26. Those below &#8377;12.75L (salaried) should opt New Regime. Update payroll TDS calculations immediately for clients.</div>
+      </div>
+
+      <!-- NEWS 7 -->
+      <div class="news-card">
+        <div class="news-card-top">
+          <span class="news-card-tag budget">Budget 2026</span>
+          <span class="news-card-date"><i class="fas fa-calendar-alt"></i> 01 Feb 2026</span>
+        </div>
+        <h4 class="news-card-title">Budget 2026: Comprehensive TDS &amp; TCS amendments &mdash; effective 1 April 2026</h4>
+        <p class="news-card-desc">Budget 2026 introduced the most comprehensive overhaul of <strong>TDS and TCS provisions</strong> in recent years. The amendments rationalise thresholds, reduce compliance burden for small taxpayers, and align TCS on foreign remittances with revised LRS limits. All changes are effective from 1st April 2026 (FY 2026-27).</p>
+        <div class="news-card-points">
+          <div class="ncp"><i class="fas fa-circle-dot"></i> <strong>TDS u/s 194I (Rent):</strong> Threshold raised from &#8377;2,40,000 to &#8377;6,00,000 per annum</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> <strong>TDS u/s 194J (Professional/Technical fees):</strong> Threshold raised from &#8377;30,000 to &#8377;50,000 per annum</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> <strong>TDS u/s 194C (Contractors):</strong> Single payment limit raised to &#8377;30,000 (from &#8377;20,000); annual limit &#8377;1 lakh</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> <strong>TCS on LRS (Section 206C(1G)):</strong> Threshold for foreign remittance raised to &#8377;10 lakh (from &#8377;7 lakh); rate remains 20% above threshold for non-education/medical</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> <strong>TDS on dividends (194):</strong> Threshold raised to &#8377;10,000 per company per year (from &#8377;5,000)</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> <strong>Section 206AB/206CCA:</strong> Non-filers with TDS/TCS above &#8377;50,000 (raised from &#8377;50,000 &mdash; unchanged) subject to higher rate</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> New TDS section 194T introduced for partnership firm drawings above &#8377;20,000 per month to partners</div>
+        </div>
+        <div class="news-card-impact"><i class="fas fa-lightbulb"></i> <strong>CA Relevance:</strong> Update all client TDS working from April 1, 2026. Payroll software, ERP systems, and vendor payment workflows must be updated. Partnership firms must implement TDS on partner drawings from FY 2026-27.</div>
+      </div>
+
+      <!-- NEWS 8 -->
+      <div class="news-card" style="margin-bottom:0;">
+        <div class="news-card-top">
+          <span class="news-card-tag mca">MCA</span>
+          <span class="news-card-date"><i class="fas fa-calendar-alt"></i> 15 Jan 2026</span>
+        </div>
+        <h4 class="news-card-title">MCA mandates enhanced disclosures in Board&#39;s Report for FY 2025-26</h4>
+        <p class="news-card-desc">The Ministry of Corporate Affairs (MCA) has amended the <strong>Companies (Accounts) Rules, 2014</strong> via notification dated 15 January 2026, requiring additional disclosures in the Board&#39;s Report for all companies for FY 2025-26. The amendments also modify Schedule III (Financial Statements format) to align with IFRS convergence roadmap.</p>
+        <div class="news-card-points">
+          <div class="ncp"><i class="fas fa-circle-dot"></i> <strong>CSR disclosure:</strong> Companies must disclose unspent CSR amount, ongoing project-wise breakup, and impact assessment reports (mandatory for companies spending above &#8377;1 crore)</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> <strong>Cybersecurity policy:</strong> Board&#39;s Report must include a statement on cybersecurity framework, incidents during the year, and corrective measures</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> <strong>ESG disclosures:</strong> Top 1000 listed companies must include BRSR Core with limited assurance from FY 2025-26 onwards</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> <strong>Related Party Transactions:</strong> Enhanced disclosure of RPT rationale, pricing basis, and arm&#39;s length certification required</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> <strong>Schedule III:</strong> Crypto/VDA holdings must be separately disclosed in Balance Sheet; ageing of borrowings added</div>
+          <div class="ncp"><i class="fas fa-circle-dot"></i> <strong>Director&#39;s Responsibility Statement:</strong> New para on internal financial controls over financial reporting (ICFR) for all listed companies</div>
+        </div>
+        <div class="news-card-impact"><i class="fas fa-lightbulb"></i> <strong>CA Relevance:</strong> Audit committees and statutory auditors must update engagement checklists. Board&#39;s Report templates need revision for all company clients. BRSR Core assurance is now a billable audit deliverable for top 1000 listed companies.</div>
+      </div>
+
+    </div>
+    <div class="svc-modal-footer">
+      <a href="#" onclick="closeAllNews(); openQuery(); return false;" class="btn-gold"><i class="fas fa-paper-plane"></i> &nbsp;Have a Query?</a>
+      <button onclick="closeAllNews()" class="svc-modal-close-btn">Close</button>
+    </div>
+  </div>
+</div>
+
+<style>
+.news-card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px 18px;
+  background: #fff;
+  border-left: 4px solid var(--gold);
+}
+.news-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.news-card-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  color: #fff;
+}
+.news-card-tag.gst    { background: #0d7a4a; }
+.news-card-tag.it     { background: #1a2744; }
+.news-card-tag.rbi    { background: #8b1a1a; }
+.news-card-tag.sebi   { background: #5a3a8b; }
+.news-card-tag.budget { background: #c8922a; }
+.news-card-tag.mca    { background: #1a5a8b; }
+.news-card-date {
+  font-size: 11px;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.news-card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 8px 0;
+  line-height: 1.45;
+  font-family: 'Playfair Display', serif;
+}
+.news-card-desc {
+  font-size: 12.5px;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin: 0 0 10px 0;
+}
+.news-card-points {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  background: var(--light-bg);
+  border-radius: 4px;
+}
+.ncp {
+  font-size: 12px;
+  color: var(--text-dark);
+  line-height: 1.55;
+  display: flex;
+  gap: 7px;
+  align-items: flex-start;
+}
+.ncp i { color: var(--gold); font-size: 8px; margin-top: 5px; flex-shrink: 0; }
+.news-card-impact {
+  font-size: 12.5px;
+  color: var(--text-dark);
+  background: #fff8ee;
+  border: 1px solid #f0d090;
+  border-radius: 4px;
+  padding: 8px 12px;
+  line-height: 1.6;
+}
+.news-card-impact i { color: var(--gold); margin-right: 5px; }
+</style>
+
+<!-- â•â• INDIVIDUAL NEWS MODAL â•â• -->
+<div class="svc-modal-overlay" id="singleNewsModal" onclick="if(event.target===this) closeSingleNews()">
+  <div class="svc-modal-box" style="max-width:660px;">
+    <div class="svc-modal-header" id="snHeader">
+      <div class="svc-modal-icon" id="snIcon"></div>
+      <div>
+        <h2 id="snTitle"></h2>
+        <p id="snDate"></p>
+      </div>
+      <button class="svc-modal-close" onclick="closeSingleNews()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="svc-modal-body" id="snBody"></div>
+    <div class="svc-modal-footer">
+      <a href="#" onclick="closeSingleNews(); openAllNews(); return false;" class="svc-modal-close-btn" style="text-decoration:none;"><i class="fas fa-arrow-left"></i> All News</a>
+      <a href="#" onclick="closeSingleNews(); openQuery(); return false;" class="btn-gold"><i class="fas fa-paper-plane"></i> &nbsp;Have a Query?</a>
+      <button onclick="closeSingleNews()" class="svc-modal-close-btn">Close</button>
+    </div>
+  </div>
+</div>
+
 <script>
+const NEWS_DATA = {
+  1: {
+    tag: '<span class="news-card-tag rbi">RBI</span>',
+    icon: '<i class="fas fa-university"></i>',
+    title: "India&#39;s CAD widens to $13.2 billion in Q3 FY2025-26",
+    date: "07 March 2026 &mdash; RBI Report",
+    body: `
+      <div style="padding:18px 20px; display:flex; flex-direction:column; gap:14px;">
+        <p style="font-size:13px; color:var(--text-mid); line-height:1.75;">India&#39;s <strong>Current Account Deficit (CAD)</strong> widened to <strong>$13.2 billion (1.5% of GDP)</strong> in Q3 FY2025-26, up from $10.4 billion in Q2. The primary driver was a sharp rise in the merchandise trade deficit to $78 billion, as imports grew faster than exports. Gold imports surged significantly during the quarter.</p>
+        <div class="svc-blk">
+          <h4><i class="fas fa-list-check"></i> Key Highlights</h4>
+          <div class="svc-pts">
+            <div class="svc-pt"><i class="fas fa-check"></i> Merchandise trade deficit rose to $78 billion â€” highest in 6 quarters</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Net services surplus stood at $41.5 billion; IT exports remain resilient at $30B+</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Private transfer receipts (remittances) strong at $29 billion</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> FPI inflows turned positive in late Q3, providing forex buffer</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> RBI forex reserves at $636 billion â€” providing 10+ months of import cover</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Gold imports surged 34% YoY due to global price rally</div>
+          </div>
+        </div>
+        <div class="svc-blk" style="background:#fff8ee; border:1px solid #f0d090; border-radius:4px; padding:12px 14px;">
+          <h4><i class="fas fa-lightbulb" style="color:var(--gold);"></i> CA / Business Relevance</h4>
+          <p style="font-size:12.5px; color:var(--text-mid); line-height:1.7; margin:6px 0 0;">Importers and exporters must review their <strong>FEMA compliance</strong>, Form 15CA/15CB requirements, and hedging strategies. Companies with ECB (External Commercial Borrowings) should track RBI guidelines on rollover. Businesses with cross-border transactions should ensure timely filing of FLA returns.</p>
+        </div>
+      </div>`
+  },
+  2: {
+    tag: '<span class="news-card-tag sebi">SEBI</span>',
+    icon: '<i class="fas fa-chart-pie"></i>',
+    title: "SEBI revamps mutual fund categories &mdash; key changes for investors",
+    date: "06 March 2026 &mdash; SEBI Circular",
+    body: `
+      <div style="padding:18px 20px; display:flex; flex-direction:column; gap:14px;">
+        <p style="font-size:13px; color:var(--text-mid); line-height:1.75;">SEBI has overhauled the <strong>mutual fund categorisation framework</strong> for the first time since 2017. The new circular introduces stricter portfolio mandate definitions, 4 new thematic sub-categories, and revised caps on sector concentration. All AMCs have been given <strong>90 days</strong> to realign their schemes.</p>
+        <div class="svc-blk">
+          <h4><i class="fas fa-list-check"></i> Key Changes</h4>
+          <div class="svc-pts">
+            <div class="svc-pt"><i class="fas fa-check"></i> Large-cap definition tightened: top 100 companies by full market cap (not free-float)</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Flexi-cap funds must hold minimum 25% each in large, mid &amp; small-cap</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> 4 new thematic sub-categories: Digital India, ESG Enhanced, Manufacturing, Infrastructure</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> New ESG Enhanced category requires third-party ESG scoring validation</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Fund houses can now launch only 1 scheme per sub-category (stricter limit)</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Switching due to reclassification â€” tax implication coordination with CBDT pending</div>
+          </div>
+        </div>
+        <div class="svc-blk" style="background:#fff8ee; border:1px solid #f0d090; border-radius:4px; padding:12px 14px;">
+          <h4><i class="fas fa-lightbulb" style="color:var(--gold);"></i> CA / Business Relevance</h4>
+          <p style="font-size:12.5px; color:var(--text-mid); line-height:1.7; margin:6px 0 0;">HNI clients holding large MF portfolios should <strong>review fund mandates</strong> post-reclassification. Tax implications on forced switches need careful review. Advisors should update client portfolio reviews for Q4 FY2025-26. SIP mandates may need restructuring if scheme category changes fundamentally.</p>
+        </div>
+      </div>`
+  },
+  3: {
+    tag: '<span class="news-card-tag gst">GST</span>',
+    icon: '<i class="fas fa-receipt"></i>',
+    title: "GST collection rises 8.1% to &#8377;1.83 lakh crore in February 2026",
+    date: "02 March 2026 &mdash; Ministry of Finance",
+    body: `
+      <div style="padding:18px 20px; display:flex; flex-direction:column; gap:14px;">
+        <p style="font-size:13px; color:var(--text-mid); line-height:1.75;">India&#39;s gross GST revenues reached <strong>&#8377;1,83,646 crore</strong> in February 2026, up 8.1% year-on-year. This marks the <strong>6th consecutive month</strong> above &#8377;1.75 lakh crore, reflecting improved compliance and IMS adoption.</p>
+        <div class="svc-blk">
+          <h4><i class="fas fa-table"></i> Component-wise Breakup</h4>
+          <div class="svc-pts">
+            <div class="svc-pt"><i class="fas fa-check"></i> CGST: &#8377;33,510 crore</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> SGST: &#8377;41,202 crore</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> IGST: &#8377;95,178 crore (incl. &#8377;43,514 crore on imports)</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Cess: &#8377;13,756 crore</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Refunds issued: &#8377;19,615 crore &mdash; Net revenue: <strong>&#8377;1,64,031 crore (up 9.3% YoY)</strong></div>
+          </div>
+        </div>
+        <div class="svc-blk">
+          <h4><i class="fas fa-list-check"></i> Key Factors</h4>
+          <div class="svc-pts">
+            <div class="svc-pt"><i class="fas fa-check"></i> E-invoicing enforcement for businesses above &#8377;5 crore turnover improving compliance</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> IMS (Invoice Management System) rollout improving GSTR-2B auto-population accuracy</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Higher imports led to IGST on imports rising by 12.3%</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> GST department increasing scrutiny of high ITC claim vs output tax mismatches</div>
+          </div>
+        </div>
+        <div class="svc-blk" style="background:#fff8ee; border:1px solid #f0d090; border-radius:4px; padding:12px 14px;">
+          <h4><i class="fas fa-lightbulb" style="color:var(--gold);"></i> CA / Business Relevance</h4>
+          <p style="font-size:12.5px; color:var(--text-mid); line-height:1.7; margin:6px 0 0;">Ensure <strong>GSTR-1 vs GSTR-3B reconciliation</strong> is up to date. Review ITC eligibility for blocked credits. QRMP taxpayers: PMT-06 challan due by 25th every month. Watch for GST scrutiny notices for FY 2022-23 as the department is actively reviewing high-value mismatches.</p>
+        </div>
+      </div>`
+  },
+  4: {
+    tag: '<span class="news-card-tag it">Income Tax</span>',
+    icon: '<i class="fas fa-file-invoice-dollar"></i>',
+    title: "CBDT notifies ITR forms for AY 2026-27 &mdash; key changes explained",
+    date: "01 March 2026 &mdash; CBDT Notification No. 18/2026",
+    body: `
+      <div style="padding:18px 20px; display:flex; flex-direction:column; gap:14px;">
+        <p style="font-size:13px; color:var(--text-mid); line-height:1.75;">CBDT has notified all ITR forms (<strong>ITR-1 to ITR-7</strong>) for AY 2026-27 (FY 2025-26). E-filing is expected to open from <strong>1st April 2026</strong>. The forms incorporate all Budget 2026 amendments including new tax slabs, revised TDS schedules, and mandatory VDA reporting.</p>
+        <div class="svc-blk">
+          <h4><i class="fas fa-list-check"></i> Form-wise Key Changes</h4>
+          <div class="svc-pts">
+            <div class="svc-pt"><i class="fas fa-check"></i> <strong>ITR-1 &amp; ITR-4:</strong> New field for agricultural income above &#8377;5 lakh for surcharge computation</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> <strong>ITR-2:</strong> Mandatory Schedule VDA for crypto income; Schedule FA for foreign assets expanded</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> <strong>ITR-3:</strong> New Schedule 115BBH for VDA from business; presumptive income under 44ADA raised to &#8377;75L</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> <strong>Schedule 112A:</strong> Revised for LTCG on listed securities &mdash; FMV as on 31 Jan 2018 mandatory</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> <strong>New Regime default:</strong> Taxpayers must actively opt for Old Regime; cannot switch back for business income</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> <strong>ITR-U (Updated Return):</strong> Window for AY 2023-24 closes 31 Mar 2026 &mdash; file before deadline</div>
+          </div>
+        </div>
+        <div class="svc-blk" style="background:#fff8ee; border:1px solid #f0d090; border-radius:4px; padding:12px 14px;">
+          <h4><i class="fas fa-lightbulb" style="color:var(--gold);"></i> CA / Business Relevance</h4>
+          <p style="font-size:12.5px; color:var(--text-mid); line-height:1.7; margin:6px 0 0;">Start collecting client data for FY 2025-26 now. <strong>Crypto holders, foreign asset holders, and those with capital gains</strong> need early preparation. Verify Form 26AS, AIS, and TIS for each client before filing. ITR-U window for AY 2023-24 closes 31 March 2026 &mdash; act immediately.</p>
+        </div>
+      </div>`
+  },
+  5: {
+    tag: '<span class="news-card-tag rbi">RBI</span>',
+    icon: '<i class="fas fa-percent"></i>',
+    title: "RBI cuts repo rate by 25 bps to 6.25% &mdash; first cut in 5 years",
+    date: "07 February 2026 &mdash; RBI MPC Meeting",
+    body: `
+      <div style="padding:18px 20px; display:flex; flex-direction:column; gap:14px;">
+        <p style="font-size:13px; color:var(--text-mid); line-height:1.75;">The RBI Monetary Policy Committee (MPC) unanimously voted to cut the repo rate by <strong>25 basis points to 6.25%</strong> &mdash; the first reduction since May 2020. The MPC maintained an <strong>&#39;accommodative&#39; stance</strong>, signalling further cuts possible if inflation remains below 4.5%.</p>
+        <div class="svc-blk">
+          <h4><i class="fas fa-table"></i> Updated Policy Rates</h4>
+          <div class="svc-pts">
+            <div class="svc-pt"><i class="fas fa-check"></i> Repo Rate: <strong>6.25%</strong> (reduced from 6.50%)</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Standing Deposit Facility (SDF): 6.00%</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Marginal Standing Facility (MSF): 6.50%</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> CRR: 4% (unchanged)</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> GDP growth forecast: 6.8% for FY2025-26 (maintained)</div>
+          </div>
+        </div>
+        <div class="svc-blk">
+          <h4><i class="fas fa-list-check"></i> Practical Impact</h4>
+          <div class="svc-pts">
+            <div class="svc-pt"><i class="fas fa-check"></i> Home loan EMIs expected to fall by &#8377;15-25/lakh for floating rate borrowers</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Business loans (MCLR-linked) will reduce in next quarterly reset cycle</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> FD rates likely to decline &mdash; lock in existing long-term FD rates now</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Debt mutual funds (longer duration) may see NAV appreciation</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Working capital loans for MSMEs expected to become cheaper from Q1 FY2026-27</div>
+          </div>
+        </div>
+        <div class="svc-blk" style="background:#fff8ee; border:1px solid #f0d090; border-radius:4px; padding:12px 14px;">
+          <h4><i class="fas fa-lightbulb" style="color:var(--gold);"></i> CA / Business Relevance</h4>
+          <p style="font-size:12.5px; color:var(--text-mid); line-height:1.7; margin:6px 0 0;">Review <strong>client loan portfolios</strong> for refinancing opportunities. For companies with fixed vs floating mix, reassess borrowing strategy. For HNI/HUF clients &mdash; review FD maturity schedules and reinvestment strategy before banks revise rates downward.</p>
+        </div>
+      </div>`
+  },
+  6: {
+    tag: '<span class="news-card-tag budget">Budget 2026</span>',
+    icon: '<i class="fas fa-landmark"></i>',
+    title: "Union Budget 2026 &mdash; Zero tax up to &#8377;12 lakh under New Regime",
+    date: "01 February 2026 &mdash; Union Budget 2026-27",
+    body: `
+      <div style="padding:18px 20px; display:flex; flex-direction:column; gap:14px;">
+        <p style="font-size:13px; color:var(--text-mid); line-height:1.75;">Finance Minister Nirmala Sitharaman presented the <strong>Union Budget 2026-27</strong> on 1st February 2026. The headline announcement: <strong>nil tax on income up to &#8377;12 lakh</strong> under New Tax Regime via enhanced Section 87A rebate of &#8377;60,000. Effective zero-tax for salaried is &#8377;12.75 lakh (including &#8377;75,000 standard deduction).</p>
+        <div class="svc-blk">
+          <h4><i class="fas fa-table"></i> New Tax Regime Slabs FY 2025-26</h4>
+          <div class="svc-pts">
+            <div class="svc-pt"><i class="fas fa-check"></i> Up to &#8377;4,00,000 &mdash; <strong>NIL</strong></div>
+            <div class="svc-pt"><i class="fas fa-check"></i> &#8377;4,00,001 &ndash; &#8377;8,00,000 &mdash; <strong>5%</strong></div>
+            <div class="svc-pt"><i class="fas fa-check"></i> &#8377;8,00,001 &ndash; &#8377;12,00,000 &mdash; <strong>10%</strong></div>
+            <div class="svc-pt"><i class="fas fa-check"></i> &#8377;12,00,001 &ndash; &#8377;16,00,000 &mdash; <strong>15%</strong></div>
+            <div class="svc-pt"><i class="fas fa-check"></i> &#8377;16,00,001 &ndash; &#8377;20,00,000 &mdash; <strong>20%</strong></div>
+            <div class="svc-pt"><i class="fas fa-check"></i> &#8377;20,00,001 &ndash; &#8377;24,00,000 &mdash; <strong>25%</strong></div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Above &#8377;24,00,000 &mdash; <strong>30%</strong></div>
+          </div>
+        </div>
+        <div class="svc-blk">
+          <h4><i class="fas fa-list-check"></i> Other Key Announcements</h4>
+          <div class="svc-pts">
+            <div class="svc-pt"><i class="fas fa-check"></i> Section 87A rebate: &#8377;60,000 for income up to &#8377;12 lakh (New Regime only)</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Standard deduction: &#8377;75,000 for salaried (unchanged)</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> NPS employer contribution deduction raised to 14% of basic for private sector</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> ULIP maturity proceeds taxable at 12.5% if annual premium exceeds &#8377;5 lakh</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Old Regime slabs and deductions (80C, 80D, HRA) remain unchanged</div>
+          </div>
+        </div>
+        <div class="svc-blk" style="background:#fff8ee; border:1px solid #f0d090; border-radius:4px; padding:12px 14px;">
+          <h4><i class="fas fa-lightbulb" style="color:var(--gold);"></i> CA / Business Relevance</h4>
+          <p style="font-size:12.5px; color:var(--text-mid); line-height:1.7; margin:6px 0 0;">All salaried clients earning up to &#8377;12.75L should opt for <strong>New Regime</strong>. Update payroll TDS calculations immediately. Prepare Old vs New regime comparison for each client. Review investment declarations for those with significant 80C/80D deductions before finalising regime choice.</p>
+        </div>
+      </div>`
+  },
+  7: {
+    tag: '<span class="news-card-tag budget">Budget 2026</span>',
+    icon: '<i class="fas fa-file-invoice"></i>',
+    title: "Budget 2026: TDS &amp; TCS thresholds revised &mdash; effective 1 April 2026",
+    date: "01 February 2026 &mdash; Finance Bill 2026",
+    body: `
+      <div style="padding:18px 20px; display:flex; flex-direction:column; gap:14px;">
+        <p style="font-size:13px; color:var(--text-mid); line-height:1.75;">Budget 2026 introduced the most comprehensive overhaul of <strong>TDS and TCS provisions</strong> in recent years. All changes are effective from <strong>1st April 2026</strong> (FY 2026-27). Businesses must update their payment workflows, ERP, and payroll systems before the new financial year.</p>
+        <div class="svc-blk">
+          <h4><i class="fas fa-table"></i> Revised TDS Thresholds</h4>
+          <div class="svc-pts">
+            <div class="svc-pt"><i class="fas fa-check"></i> <strong>194I (Rent):</strong> &#8377;2,40,000 &rarr; <strong>&#8377;6,00,000 per annum</strong></div>
+            <div class="svc-pt"><i class="fas fa-check"></i> <strong>194J (Professional/Technical fees):</strong> &#8377;30,000 &rarr; <strong>&#8377;50,000 per annum</strong></div>
+            <div class="svc-pt"><i class="fas fa-check"></i> <strong>194C (Contractors):</strong> Single payment &#8377;20,000 &rarr; <strong>&#8377;30,000</strong>; Annual &#8377;75,000 &rarr; <strong>&#8377;1,00,000</strong></div>
+            <div class="svc-pt"><i class="fas fa-check"></i> <strong>194 (Dividends):</strong> &#8377;5,000 &rarr; <strong>&#8377;10,000 per company per year</strong></div>
+            <div class="svc-pt"><i class="fas fa-check"></i> <strong>194T (NEW):</strong> TDS on drawings by partners above <strong>&#8377;20,000/month</strong> from partnership firms</div>
+          </div>
+        </div>
+        <div class="svc-blk">
+          <h4><i class="fas fa-list-check"></i> TCS Changes</h4>
+          <div class="svc-pts">
+            <div class="svc-pt"><i class="fas fa-check"></i> <strong>206C(1G) LRS foreign remittance:</strong> Threshold raised to <strong>&#8377;10 lakh</strong> (from &#8377;7 lakh); 20% TCS above threshold for non-education/medical</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> <strong>206AB/206CCA:</strong> Higher TDS/TCS for non-filers &mdash; threshold unchanged at &#8377;50,000</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Education/medical LRS remittances: TCS at 5% (unchanged)</div>
+          </div>
+        </div>
+        <div class="svc-blk" style="background:#fff8ee; border:1px solid #f0d090; border-radius:4px; padding:12px 14px;">
+          <h4><i class="fas fa-lightbulb" style="color:var(--gold);"></i> CA / Business Relevance</h4>
+          <p style="font-size:12.5px; color:var(--text-mid); line-height:1.7; margin:6px 0 0;"><strong>Update all TDS workings from 1 April 2026.</strong> Payroll software, ERP vendor payment modules, and rent payment setups must be revised. Partnership firms must implement TDS u/s 194T on partner drawings from FY 2026-27. Issue Form 16A on time for Q4 FY2025-26.</p>
+        </div>
+      </div>`
+  },
+  8: {
+    tag: '<span class="news-card-tag mca">MCA</span>',
+    icon: '<i class="fas fa-building-columns"></i>',
+    title: "MCA mandates enhanced disclosures in Board&#39;s Report for FY 2025-26",
+    date: "15 January 2026 &mdash; MCA Notification",
+    body: `
+      <div style="padding:18px 20px; display:flex; flex-direction:column; gap:14px;">
+        <p style="font-size:13px; color:var(--text-mid); line-height:1.75;">MCA has amended the <strong>Companies (Accounts) Rules, 2014</strong> via notification dated 15 January 2026, requiring additional disclosures in the Board&#39;s Report for all companies for FY 2025-26. Schedule III (Financial Statement format) also modified to align with IFRS convergence roadmap.</p>
+        <div class="svc-blk">
+          <h4><i class="fas fa-list-check"></i> New Mandatory Disclosures</h4>
+          <div class="svc-pts">
+            <div class="svc-pt"><i class="fas fa-check"></i> <strong>CSR:</strong> Project-wise unspent amount, impact assessment report (mandatory if spending above &#8377;1 crore)</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> <strong>Cybersecurity:</strong> Statement on cybersecurity framework, incidents during the year &amp; corrective measures</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> <strong>ESG/BRSR:</strong> Top 1000 listed companies: BRSR Core with limited assurance from FY 2025-26</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> <strong>RPT:</strong> Enhanced disclosure of related party transaction rationale, pricing basis &amp; arm&#39;s length certification</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> <strong>ICFR:</strong> Director&#39;s Responsibility Statement â€” new para on Internal Financial Controls over Financial Reporting for all listed companies</div>
+          </div>
+        </div>
+        <div class="svc-blk">
+          <h4><i class="fas fa-list-check"></i> Schedule III Changes</h4>
+          <div class="svc-pts">
+            <div class="svc-pt"><i class="fas fa-check"></i> Crypto/VDA holdings must be separately disclosed in Balance Sheet</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Ageing schedule of borrowings added to notes to accounts</div>
+            <div class="svc-pt"><i class="fas fa-check"></i> Disclosure of wilful defaulter status of promoters required</div>
+          </div>
+        </div>
+        <div class="svc-blk" style="background:#fff8ee; border:1px solid #f0d090; border-radius:4px; padding:12px 14px;">
+          <h4><i class="fas fa-lightbulb" style="color:var(--gold);"></i> CA / Business Relevance</h4>
+          <p style="font-size:12.5px; color:var(--text-mid); line-height:1.7; margin:6px 0 0;">Audit committees and statutory auditors must <strong>update engagement checklists</strong>. Board&#39;s Report templates need revision for all company clients. BRSR Core assurance is now a billable audit deliverable for top 1000 listed companies. Ensure RPT disclosures and CSR unspent accounts are properly documented before AGM.</p>
+        </div>
+      </div>`
+  }
+};
+
+function openNews(id) {
+  var d = NEWS_DATA[id];
+  if (!d) return;
+  document.getElementById('snIcon').innerHTML = d.icon;
+  document.getElementById('snTitle').textContent = '';
+  document.getElementById('snTitle').innerHTML = d.tag + ' &nbsp;' + d.title;
+  document.getElementById('snDate').innerHTML = '<i class="fas fa-calendar-alt" style="color:var(--gold);margin-right:5px;"></i>' + d.date;
+  document.getElementById('snBody').innerHTML = d.body;
+  document.getElementById('singleNewsModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeSingleNews() {
+  document.getElementById('singleNewsModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
 function openFreeConsult() {
   document.getElementById('freeConsultModal').classList.add('open');
   document.body.style.overflow = 'hidden';
+  var footer = document.querySelector('#freeConsultModal .modal-footer');
+  if (footer) footer.style.display = '';
 }
 function closeFreeConsult() {
   document.getElementById('freeConsultModal').classList.remove('open');
@@ -3465,4 +4005,31 @@ async function submitFreeConsult() {
   try {
     const res = await fetch('https://api.web3forms.com/submit', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ access_key: W3F_KEY, subject: 'Free Consultation Request &ndash; PSV Jain & Associates', from_name: 'PSV Jain Website &ndash; Consulta
+      body: JSON.stringify({ access_key: W3F_KEY, subject: 'Free Consultation Request &ndash; PSV Jain & Associates', from_name: 'PSV Jain Website &ndash; Consultation', name: name, phone: phone, email: email || 'Not provided', service: service || 'Not specified', message: msg || 'No message' })
+    });
+    const data = await res.json();
+    if (data.success) {
+      document.querySelector('#freeConsultModal .modal-body').innerHTML = '<div style="text-align:center; padding:30px 10px;"><div style="font-size:44px; color:var(--gold); margin-bottom:12px;"><i class="fas fa-check-circle"></i></div><h4 style="font-family:Playfair Display,serif; color:var(--navy); margin-bottom:8px;">Consultation Booked!</h4><p style="font-size:13px; color:var(--text-mid);">Thank you, <strong>' + name + '</strong>! We will call you at <strong>' + phone + '</strong> shortly.</p></div>';
+      document.querySelector('#freeConsultModal .modal-footer').style.display = 'none';
+    } else { throw new Error(); }
+  } catch(e) { btn.disabled = false; btn.innerHTML = '<i class="fas fa-calendar-check"></i> Book Free Consultation'; alert('Something went wrong. Please try again.'); }
+}
+function openAllNews() {
+  document.getElementById('allNewsModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeAllNews() {
+  document.getElementById('allNewsModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+</body>
+</html>
+  document.getElementById('freeConsultModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  // Reset modal body and footer in case it was replaced by success message
+  var footer = document.querySelector('#freeConsultModal .modal-footer');
+  if (footer) footer.style.display = '';
+</script>
+</body>
+</html>
