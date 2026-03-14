@@ -1720,11 +1720,9 @@ footer {
 <div class="topbar">
   <div class="topbar-inner">
     <div class="topbar-left">
-      <a href="mailto:psvjainassociates2024@gmail.com">
-        <i class="fas fa-envelope"></i> psvjainassociates2024@gmail.com
-      </a>
-      <a href="tel:+91">
-        <i class="fas fa-phone"></i> +91 â€” Borivali East, Mumbai
+      <a href="mailto:psvjainassociates2024@gmail.com"><i class="fas fa-envelope"></i> psvjainassociates2024@gmail.com</a>
+      <a href="tel:+919594729480">
+        <i class="fas fa-phone"></i> +91 95947 29480
       </a>
     </div>
     <div class="topbar-right">
@@ -1962,11 +1960,11 @@ footer {
               <h4><i class="fas fa-location-dot" style="color:var(--gold); margin-right:6px"></i>Contact Us</h4>
               <div class="contact-row">
                 <i class="fas fa-map-marker-alt"></i>
-                <span>105, Yashwant Shopping Centre, Kasturba Road No. 7, Chinchpada, Borivali East, Mumbai â€“ 400066</span>
+                <span>124, Yashwant Shopping Centre, Kasturba Road No. 7, Chinchpada, Borivali East, Mumbai â€“ 400066</span>
               </div>
               <div class="contact-row">
                 <i class="fas fa-envelope"></i>
-                <span><a href="/cdn-cgi/l/email-protection#8efefdf8e4efe7e0a0e1e8e8e7edebcee9e3efe7e2a0ede1e3"><span class="__cf_email__" data-cfemail="f58586839f949c9bdb9a93939c9690b59298949c99db969a98">[email&#160;protected]</span></a></span>
+                <span><a href="mailto:psvjainassociates2024@gmail.com">psvjainassociates2024@gmail.com</a></span>
               </div>
               <div class="contact-row">
                 <i class="fas fa-star" style="color:var(--gold)"></i>
@@ -2221,7 +2219,7 @@ footer {
         </a>
         <div style="margin-top:12px; font-size:12px; color:var(--text-light);">
           <i class="fas fa-envelope" style="color:var(--gold);"></i>
-          <a href="/cdn-cgi/l/email-protection#651516130f040c0b4b0a03030c0600250208040c094b060a08" style="color:var(--gold);"><span class="__cf_email__" data-cfemail="1c6c6f6a767d757232737a7a757f795c7b717d7570327f7371">[email&#160;protected]</span></a>
+          <a href="mailto:psvjainassociates2024@gmail.com" style="color:var(--gold);">psvjainassociates2024@gmail.com</a>
         </div>
       </div>
     </div>
@@ -2278,11 +2276,11 @@ footer {
         </p>
         <div class="footer-address">
           <i class="fas fa-map-marker-alt"></i>
-          <span>105, Yashwant Shopping Centre, Kasturba Road No. 7, Chinchpada, Borivali East, Mumbai â€“ 400066, Maharashtra, India</span>
+          <span>124, Yashwant Shopping Centre, Kasturba Road No. 7, Chinchpada, Borivali East, Mumbai â€“ 400066, Maharashtra, India</span>
         </div>
         <div class="footer-address">
           <i class="fas fa-envelope"></i>
-          <span><a href="/cdn-cgi/l/email-protection#86f6f5f0ece7efe8a8e9e0e0efe5e3c6e1ebe7efeaa8e5e9eb" style="color:#6a80a0;"><span class="__cf_email__" data-cfemail="512122273b30383f7f3e373738323411363c30383d7f323e3c">[email&#160;protected]</span></a></span>
+          <span><a href="mailto:psvjainassociates2024@gmail.com" style="color:#6a80a0;">psvjainassociates2024@gmail.com</a></span>
         </div>
         <div class="footer-address">
           <i class="fas fa-star" style="color:var(--gold)"></i>
@@ -2453,15 +2451,8 @@ async function submitQuery(btn) {
   btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> &nbsp; Sending...';
   try {
     const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        access_key: W3F_KEY,
-        subject: 'New Query â€“ PSV Jain & Associates Website',
-        from_name: 'PSV Jain Website',
-        name: name, email: email, phone: phone || 'Not provided',
-        service: service || 'Not specified', message: message
-      })
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ access_key: W3F_KEY, subject: 'New Query â€“ PSV Jain & Associates', from_name: 'PSV Jain Website', name, email, phone: phone || 'Not provided', service: service || 'Not specified', message })
     });
     const data = await res.json();
     if (data.success) {
@@ -2470,12 +2461,8 @@ async function submitQuery(btn) {
       ['q_name','q_email','q_phone','q_message'].forEach(id => document.getElementById(id).value = '');
       document.getElementById('q_service').value = '';
       setTimeout(() => { closeQuery(); btn.innerHTML = '<i class="fas fa-paper-plane"></i> &nbsp; Submit Query'; btn.style.background = ''; btn.disabled = false; }, 2500);
-    } else { throw new Error('Failed'); }
-  } catch(e) {
-    btn.innerHTML = '<i class="fas fa-paper-plane"></i> &nbsp; Submit Query';
-    btn.disabled = false;
-    alert('Something went wrong. Please try again.');
-  }
+    } else { throw new Error(); }
+  } catch(e) { btn.innerHTML = '<i class="fas fa-paper-plane"></i> &nbsp; Submit Query'; btn.disabled = false; alert('Something went wrong. Please try again.'); }
 }
 
 // â”€â”€ STICKY HEADER SHADOW â”€â”€
@@ -3063,7 +3050,7 @@ function closeSvcOutside(e) {
       <div class="svc-blk">
         <h4><i class="fas fa-info-circle"></i> Who We Are</h4>
         <p><strong>PSV Jain & Associates</strong> is a reputed Chartered Accountant firm established in Mumbai, offering a full spectrum of financial, taxation, audit, and compliance services. Our firm is registered with the Institute of Chartered Accountants of India (ICAI) and proudly serves 500+ clients across Mumbai, Maharashtra, and India.</p>
-        <p>We are headquartered at <strong>105, Yashwant Shopping Centre, Kasturba Road No. 7, Chinchpada, Borivali East, Mumbai â€“ 400066</strong> â€” conveniently accessible to businesses and individuals across the western suburbs of Mumbai.</p>
+        <p>We are headquartered at <strong>124, Yashwant Shopping Centre, Kasturba Road No. 7, Chinchpada, Borivali East, Mumbai â€“ 400066</strong> â€” conveniently accessible to businesses and individuals across the western suburbs of Mumbai.</p>
       </div>
       <div class="svc-blk">
         <h4><i class="fas fa-bullseye"></i> Our Mission</h4>
@@ -3300,11 +3287,15 @@ function closeAbout() {
     <div class="svc-modal-body">
       <div class="svc-blk">
         <h4><i class="fas fa-map-marker-alt"></i> Office Address</h4>
-        <p>105, Yashwant Shopping Centre, Kasturba Road No. 7,<br>Chinchpada, Borivali East, Mumbai â€“ 400066<br>Maharashtra, India</p>
+        <p>124, Yashwant Shopping Centre, Kasturba Road No. 7,<br>Chinchpada, Borivali East, Mumbai â€“ 400066<br>Maharashtra, India</p>
       </div>
       <div class="svc-blk">
         <h4><i class="fas fa-envelope"></i> Email</h4>
-        <p><a href="/cdn-cgi/l/email-protection#a6d6d5d0ccc7cfc888c9c0c0cfc5c3e6c1cbc7cfca88c5c9cb" style="color:var(--gold); font-weight:600;"><span class="__cf_email__" data-cfemail="91e1e2e7fbf0f8ffbffef7f7f8f2f4d1f6fcf0f8fdbff2fefc">[email&#160;protected]</span></a></p>
+        <p><a href="mailto:psvjainassociates2024@gmail.com" style="color:var(--gold); font-weight:600;">psvjainassociates2024@gmail.com</a></p>
+      </div>
+      <div class="svc-blk">
+        <h4><i class="fas fa-phone"></i> Contact Number</h4>
+        <p><a href="tel:+919594729480" style="color:var(--gold); font-weight:600;">+91 95947 29480</a></p>
       </div>
       <div class="svc-blk">
         <h4><i class="fas fa-star"></i> Google Rating</h4>
@@ -3326,7 +3317,7 @@ function closeAbout() {
     </div>
     <div class="svc-modal-footer">
       <a href="#" onclick="closeContact(); openQuery(); return false;" class="btn-gold"><i class="fas fa-paper-plane"></i> &nbsp;Send a Query</a>
-      <a href="/cdn-cgi/l/email-protection#79090a0f1318101757161f1f101a1c391e14181015571a1614" class="svc-modal-close-btn" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px;"><i class="fas fa-envelope"></i> Email Us</a>
+      <a href="mailto:psvjainassociates2024@gmail.com" class="svc-modal-close-btn" style="text-decoration:none; display:inline-flex; align-items:center; gap:6px;"><i class="fas fa-envelope"></i> Email Us</a>
       <button onclick="closeContact()" class="svc-modal-close-btn">Close</button>
     </div>
   </div>
@@ -3356,30 +3347,21 @@ async function submitCareers() {
   btn.disabled = true; btn.textContent = 'Sending...';
   try {
     const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        access_key: W3F_KEY,
-        subject: 'New Career Application â€“ PSV Jain & Associates',
-        from_name: 'PSV Jain Website â€“ Careers',
-        name: fname + ' ' + lname, email: email, mobile: mobile, gender: gender,
-        date_of_birth: dob,
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ access_key: W3F_KEY, subject: 'New Career Application â€“ PSV Jain & Associates', from_name: 'PSV Jain Website â€“ Careers',
+        name: fname + ' ' + lname, email, mobile, gender, date_of_birth: dob,
         position: document.getElementById('cf_position').value || 'Not specified',
         qualification: document.getElementById('cf_qualification').value || 'Not specified',
         last_company: document.getElementById('cf_lastco').value || 'Not specified',
         experience: (document.getElementById('cf_exp_yr').value || '-') + ' yrs ' + (document.getElementById('cf_exp_mo').value || '-') + ' months',
-        comments: document.getElementById('cf_comments').value || 'None'
-      })
+        comments: document.getElementById('cf_comments').value || 'None' })
     });
     const data = await res.json();
     if (data.success) {
       document.getElementById('careerFormWrap').style.display = 'none';
       document.getElementById('careerSuccess').style.display = 'block';
-    } else { throw new Error('Failed'); }
-  } catch(e) {
-    btn.disabled = false; btn.textContent = 'Send Application';
-    alert('Something went wrong. Please try again.');
-  }
+    } else { throw new Error(); }
+  } catch(e) { btn.disabled = false; btn.textContent = 'Send Application'; alert('Something went wrong. Please try again.'); }
 }
 function openContact() {
   document.getElementById('contactModal').classList.add('open');
@@ -3458,21 +3440,12 @@ async function submitFreeConsult() {
   var msg = document.getElementById('fc_msg').value.trim();
   if (!name || !phone) { alert('Please enter your name and phone number.'); return; }
   var btn = document.querySelector('#freeConsultModal .btn-gold');
-  btn.disabled = true;
-  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+  btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
   try {
     const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        access_key: W3F_KEY,
-        subject: 'Free Consultation Request â€“ PSV Jain & Associates',
-        from_name: 'PSV Jain Website â€“ Consultation',
-        name: name, phone: phone,
-        email: email || 'Not provided',
-        service: service || 'Not specified',
-        message: msg || 'No message'
-      })
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ access_key: W3F_KEY, subject: 'Free Consultation Request â€“ PSV Jain & Associates', from_name: 'PSV Jain Website â€“ Consultation',
+        name, phone, email: email || 'Not provided', service: service || 'Not specified', message: msg || 'No message' })
     });
     const data = await res.json();
     if (data.success) {
@@ -3483,12 +3456,8 @@ async function submitFreeConsult() {
         '<p style="font-size:13px; color:var(--text-mid);">Thank you, <strong>' + name + '</strong>! We will call you at <strong>' + phone + '</strong> shortly to schedule your free consultation.</p>' +
         '</div>';
       document.querySelector('#freeConsultModal .modal-footer').style.display = 'none';
-    } else { throw new Error('Failed'); }
-  } catch(e) {
-    btn.disabled = false;
-    btn.innerHTML = '<i class="fas fa-calendar-check"></i> Book Free Consultation';
-    alert('Something went wrong. Please try again.');
-  }
+    } else { throw new Error(); }
+  } catch(e) { btn.disabled = false; btn.innerHTML = '<i class="fas fa-calendar-check"></i> Book Free Consultation'; alert('Something went wrong. Please try again.'); }
 }
 </script>
 </body>
