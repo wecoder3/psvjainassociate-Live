@@ -2479,7 +2479,7 @@ async function submitQuery(btn) {
   try {
     const res = await fetch('https://api.web3forms.com/submit', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ access_key: W3F_KEY, subject: 'New Query &ndash; PSV Jain & Associates', from_name: 'PSV Jain Website', name, email, phone: phone || 'Not provided', service: service || 'Not specified', message })
+      body: JSON.stringify({ access_key: W3F_KEY, subject: 'New Query - PSV Jain & Associates', from_name: 'PSV Jain Website', name, email, phone: phone || 'Not provided', service: service || 'Not specified', message })
     });
     const data = await res.json();
     if (data.success) {
@@ -3377,7 +3377,7 @@ async function submitCareers() {
   try {
     const res = await fetch('https://api.web3forms.com/submit', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ access_key: W3F_KEY, subject: 'New Career Application &ndash; PSV Jain & Associates', from_name: 'PSV Jain Website &ndash; Careers',
+      body: JSON.stringify({ access_key: W3F_KEY, subject: 'New Career Application - PSV Jain & Associates', from_name: 'PSV Jain Website - Careers',
         name: fname + ' ' + lname, email, mobile, gender, date_of_birth: dobFormatted,
         position: document.getElementById('cf_position').value || 'Not specified',
         qualification: document.getElementById('cf_qualification').value || 'Not specified',
@@ -4039,10 +4039,10 @@ async function submitFreeConsult() {
     const data = await res.json();
     if (data.success) {
       document.querySelector('#freeConsultModal .modal-body').innerHTML =
-        '<div style="text-align:center; padding:30px 10px;">' +
-        '<div style="font-size:44px; color:var(--gold); margin-bottom:12px;"><i class="fas fa-check-circle"></i></div>' +
-        '<h4 style="font-family:Playfair Display,serif; color:var(--navy); margin-bottom:8px;">Consultation Booked!</h4>' +
-        '<p style="font-size:13px; color:var(--text-mid);">Thank you, <strong>' + name + '</strong>! We will call you at <strong>' + phone + '</strong> shortly to schedule your free consultation.</p>' +
+        '<div style="text-align:center;padding:30px 10px;">' +
+        '<div style="font-size:44px;color:var(--gold);margin-bottom:12px;"><i class="fas fa-check-circle"></i></div>' +
+        '<h4 style="font-family:Playfair Display,serif;color:var(--navy);margin-bottom:8px;">Consultation Booked!</h4>' +
+        '<p style="font-size:13px;color:var(--text-mid);">Thank you, <strong>' + name + '</strong>! We will call you at <strong>' + phone + '</strong> shortly to schedule your free consultation.</p>' +
         '</div>';
       document.querySelector('#freeConsultModal .modal-footer').style.display = 'none';
     } else { throw new Error(); }
